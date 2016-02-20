@@ -37,6 +37,10 @@
     
     <string name="dialog_message_title">提示</string>
     <string name="dialog_text_wait">登陆成功</string>
+    
+    <string name="tab_register">签到</string>
+    <string name="tab_network">朋友圈</string>
+    <string name="tab_recommend">推荐</string>
 
 
 </resources>

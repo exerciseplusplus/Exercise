@@ -78,11 +78,8 @@ public class RegisterActivity extends Activity {
 				if (!password.isEmpty()) {
 					if (!userName.isEmpty()) {
 						if (!userEmail.isEmpty()) {
-							verifyCode(userPhoneCheckcode,userPhone);
-							if(isCheck)
-							{
-								Signup(userName,userEmail,password,userPhone);
-							}
+							//verifyCode(userPhoneCheckcode,userPhone);
+							Signup(userName,userEmail,password,userPhone);
 						
 							
 						} else {

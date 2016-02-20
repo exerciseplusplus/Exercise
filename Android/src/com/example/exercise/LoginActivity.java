@@ -75,6 +75,10 @@ public class LoginActivity extends Activity {
 						progressDialogShow();
 						Log.d("Login", "Login successfully");
 						showLogin(R.string.dialog_message_title,R.string.dialog_text_wait);
+						
+						Intent intent =new Intent(LoginActivity.this,MainActivity.class);
+						startActivity(intent);
+						finish();
 					}
 					else
 					{
