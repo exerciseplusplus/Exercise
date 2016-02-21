@@ -41,6 +41,9 @@
     <string name="tab_register">签到</string>
     <string name="tab_network">朋友圈</string>
     <string name="tab_recommend">推荐</string>
+    
+    <string name="fragment_register_run">跑步签到</string>
+    <string name="fragment_register_updown">俯卧撑签到</string>
 
 
 </resources>

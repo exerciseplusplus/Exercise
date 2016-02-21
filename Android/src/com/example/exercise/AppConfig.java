@@ -2,6 +2,7 @@ package com.example.exercise;
 
 
 import com.avos.avoscloud.AVOSCloud;
+import com.baidu.mapapi.SDKInitializer;
 
 import android.app.Application;
 
@@ -16,6 +17,8 @@ public class AppConfig extends Application {
 				"bbOVrjU0kGBQxkAqVLrENRJH-gzGzoHsz",
 				"TrYcf9AP3jAsbKndb91oavzw");
 		AVOSCloud.useAVCloudCN();
+		
+		SDKInitializer.initialize(this);
 	}
 }
 
