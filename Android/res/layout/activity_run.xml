@@ -10,6 +10,7 @@
         android:clickable="true" />
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -50,5 +51,22 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="25dp"
         android:layout_marginTop="10dip" />
+
+    <TextView
+        android:id="@+id/textView_geo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="33dp"
+        android:text="TextView" />
+    
+    <Button
+        android:id="@+id/button_run_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_run_change"
+		android:layout_below="@+id/textView_geo"
+        android:text="开始"/>
 
 </RelativeLayout>

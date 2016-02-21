@@ -1,6 +1,10 @@
 package com.example.exercise;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
@@ -20,10 +24,14 @@ import java.util.List;
 import java.util.Map;
 
 
+
+
+
 public class RegisterFragment extends Fragment{
 
     private View mParent;  
     private FragmentActivity mActivity;
+    static AppConfig  app;
 	
 	Button runButton;
 	Button updownButton;
@@ -68,6 +76,7 @@ public class RegisterFragment extends Fragment{
     {
     	public void onClick(View arg0) {
     		Log.d("Register","Hello");
+    		//startAlarm();
 			Intent intent =new Intent(mActivity,RunActivity.class);
 			startActivity(intent);
     		
@@ -82,6 +91,20 @@ public class RegisterFragment extends Fragment{
     	
     	}
     };
+    
+	private void startAlarm() {
+		Log.d("GEO", "start alarm");
+		
+		AlarmManager am = (AlarmManager)mActivity.getSystemService(Context.ALARM_SERVICE);
+		Intent collectIntent = new Intent(mActivity, RunActivity.class);
+		PendingIntent collectSender 
+			= PendingIntent.getService(mActivity, 0, collectIntent, 0);
+		am.cancel(collectSender);
+		am.setRepeating(AlarmManager.ELAPSED_REALTIME
+			, SystemClock.elapsedRealtime()
+			, 10 * 1000
+			, collectSender);
+	}
 
     @Override
     public void onHiddenChanged(boolean hidden) {
