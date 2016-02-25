@@ -104,7 +104,7 @@ public class RegisterActivity extends Activity {
 	    
     	  Log.d("Login",userPhone);
     	  try {
-              AVOSCloud.requestSMSCode(userPhone, "Exercise+", "зЂВс", 10);
+              AVOSCloud.requestSMSCode(userPhone, "Exercise+", "Register", 10);
             } catch (AVException e) {
               e.printStackTrace();
             }

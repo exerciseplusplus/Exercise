@@ -2,8 +2,7 @@
 <resources>
 
     <string name="app_name">Exercise</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">设置</string>
     
     <string name="login_input_user_name">请输入用户名</string>
     <string name="login_input_user_password">请输入密码</string>
@@ -44,6 +43,14 @@
     
     <string name="fragment_register_run">跑步签到</string>
     <string name="fragment_register_updown">俯卧撑签到</string>
+
+    <string name="fragment_recommend_user">好友推荐</string>
+    <string name="fragment_recommend_method">运动推荐</string>
+
+    <string name="updown_button_start">开始</string>
+    <string name="updown_number">个俯卧撑</string>
+    <string name="updown_time">使用时间</string>
+
 
 
 </resources>

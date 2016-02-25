@@ -1,17 +1,25 @@
 package com.example.exercise;
 
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 public class RecommendFragment extends Fragment {
 
 	private View mParent;
 	private FragmentActivity mActivity;
-	/**
+	Button userButton;
+	Button methodButton;
+	/**5
 	 * Create a new instance of DetailsFragment, initialized to show the text at
 	 * 'index'.
 	 */
@@ -43,7 +51,28 @@ public class RecommendFragment extends Fragment {
 		super.onActivityCreated(savedInstanceState);
 		mParent = getView();
 		mActivity = getActivity();
+
+		userButton = (Button)mParent.findViewById(R.id.button_recommend_user);
+		methodButton = (Button)mParent.findViewById(R.id.button_recommend_method);
+		userButton.setOnClickListener(userListener);
+		methodButton.setOnClickListener(methodListener);
+		
 	}
+
+	View.OnClickListener userListener = new View.OnClickListener()
+	{
+		public void onClick(View arg0) {
+			Log.d("Recommend", "Hello");
+		}
+	};
+
+	View.OnClickListener methodListener = new View.OnClickListener()
+	{
+		public void onClick(View arg0) {
+			Log.d("Recommend","World");
+		}
+	};
+
 
 	private void backHomeFragment() {
 		getFragmentManager().beginTransaction()

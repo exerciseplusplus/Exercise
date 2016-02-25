@@ -3,7 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-   
- 
+
+    <Button
+        android:id="@+id/button_recommend_user"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_recommend_user" />
+
+    <Button
+        android:id="@+id/button_recommend_method"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_recommend_method"/>
+
+
 
 </LinearLayout>

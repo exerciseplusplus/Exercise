@@ -35,16 +35,18 @@ public final class R {
         public static final int title_btn_pressed=0x7f020011;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001e;
+        public static final int action_settings=0x7f080020;
         public static final int bmapView=0x7f080014;
         public static final int button_checkcode=0x7f080012;
         public static final int button_find_password=0x7f080001;
         public static final int button_forget_password=0x7f080006;
         public static final int button_i_need_register=0x7f080013;
         public static final int button_login=0x7f080004;
+        public static final int button_recommend_method=0x7f08001d;
+        public static final int button_recommend_user=0x7f08001c;
         public static final int button_register=0x7f080005;
-        public static final int button_register_run=0x7f08001c;
-        public static final int button_register_updown=0x7f08001d;
+        public static final int button_register_run=0x7f08001e;
+        public static final int button_register_updown=0x7f08001f;
         public static final int button_run_change=0x7f080018;
         public static final int button_run_start=0x7f08001a;
         public static final int customicon=0x7f080017;
@@ -99,23 +101,24 @@ public final class R {
         public static final int forget_email_send=0x7f06000f;
         public static final int forget_password_find_password_button=0x7f060010;
         public static final int forget_password_find_password_email=0x7f060011;
-        public static final int fragment_register_run=0x7f060012;
-        public static final int fragment_register_updown=0x7f060013;
-        public static final int hello_world=0x7f060014;
-        public static final int login_button_forget_password=0x7f060015;
-        public static final int login_button_login=0x7f060016;
-        public static final int login_button_register=0x7f060017;
-        public static final int login_input_user_name=0x7f060018;
-        public static final int login_input_user_password=0x7f060019;
-        public static final int register_input_user_checkcode=0x7f06001a;
-        public static final int register_input_user_checkcode_button=0x7f06001b;
-        public static final int register_input_user_email=0x7f06001c;
-        public static final int register_input_user_password_again=0x7f06001d;
-        public static final int register_input_user_phone=0x7f06001e;
-        public static final int success_register_success=0x7f06001f;
-        public static final int tab_network=0x7f060020;
-        public static final int tab_recommend=0x7f060021;
-        public static final int tab_register=0x7f060022;
+        public static final int fragment_recommend_method=0x7f060012;
+        public static final int fragment_recommend_user=0x7f060013;
+        public static final int fragment_register_run=0x7f060014;
+        public static final int fragment_register_updown=0x7f060015;
+        public static final int login_button_forget_password=0x7f060016;
+        public static final int login_button_login=0x7f060017;
+        public static final int login_button_register=0x7f060018;
+        public static final int login_input_user_name=0x7f060019;
+        public static final int login_input_user_password=0x7f06001a;
+        public static final int register_input_user_checkcode=0x7f06001b;
+        public static final int register_input_user_checkcode_button=0x7f06001c;
+        public static final int register_input_user_email=0x7f06001d;
+        public static final int register_input_user_password_again=0x7f06001e;
+        public static final int register_input_user_phone=0x7f06001f;
+        public static final int success_register_success=0x7f060020;
+        public static final int tab_network=0x7f060021;
+        public static final int tab_recommend=0x7f060022;
+        public static final int tab_register=0x7f060023;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

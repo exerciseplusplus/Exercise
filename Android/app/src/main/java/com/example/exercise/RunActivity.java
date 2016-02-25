@@ -6,6 +6,7 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -16,7 +17,7 @@ import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
-
+import android.widget.Toast;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -33,29 +34,33 @@ import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
 
 /**
- * ´ËdemoÓÃÀ´Õ¹Ê¾ÈçºÎ½áºÏ¶¨Î»SDKÊµÏÖ¶¨Î»£¬²¢Ê¹ÓÃMyLocationOverlay»æÖÆ¶¨Î»Î»ÖÃ Í¬Ê±Õ¹Ê¾ÈçºÎÊ¹ÓÃ×Ô¶¨ÒåÍ¼±ê»æÖÆ²¢µã»÷Ê±µ¯³öÅİÅİ
+ * æ­¤demoç”¨æ¥å±•ç¤ºå¦‚ä½•ç»“åˆå®šä½SDKå®ç°å®šä½ï¼Œå¹¶ä½¿ç”¨MyLocationOverlayç»˜åˆ¶å®šä½ä½ç½® åŒæ—¶å±•ç¤ºå¦‚ä½•ä½¿ç”¨è‡ªå®šä¹‰å›¾æ ‡ç»˜åˆ¶å¹¶ç‚¹å‡»æ—¶å¼¹å‡ºæ³¡æ³¡
  */
 public class RunActivity extends Activity {
 
-    // ¶¨Î»Ïà¹Ø
+    // å®šä½ç›¸å…³
     LocationClient mLocClient;
     public MyLocationListenner myLocationListener = new MyLocationListenner();
     private LocationMode mCurrentMode;
     BitmapDescriptor mCurrentMarker;
-    
-    private Handler handler = new Handler(); 
+
+    private Handler handler = new Handler();
     private static final int accuracyCircleFillColor = 0xAAFFFF88;
     private static final int accuracyCircleStrokeColor = 0xAA00FF00;
     private static int LOCATION_COUTNS = 0;
     MapView mMapView;
     BaiduMap mBaiduMap;
 
-    // UIÏà¹Ø
-    OnCheckedChangeListener radioButtonListener;
+    // UIç›¸å…³
     Button requestLocButton;
     Button startButton;
-    boolean isFirstLoc = true; // ÊÇ·ñÊ×´Î¶¨Î»
+    boolean isFirstLoc = true; // æ˜¯å¦é¦–æ¬¡å®šä½
+    boolean isStart = false; // æ˜¯å¦å¼€å§‹å®šä½
     TextView TextViewLocInfo;
+
+    //å­˜å‚¨ç›¸å…³
+    Rundata rundata ;
+    Cursor mCursor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,7 +70,7 @@ public class RunActivity extends Activity {
         startButton = (Button) findViewById(R.id.button_run_start);
         TextViewLocInfo = (TextView)findViewById(R.id.textView_geo);
         mCurrentMode = LocationMode.NORMAL;
-        requestLocButton.setText("ÆÕÍ¨");
+        requestLocButton.setText("æ™®é€š");
 
         requestLocButton.setOnClickListener(requestListener);
         startButton.setOnClickListener(startListener);
@@ -73,43 +78,69 @@ public class RunActivity extends Activity {
         RadioGroup group = (RadioGroup) this.findViewById(R.id.radioGroup);
         group.setOnCheckedChangeListener(radioButtonListener);
 
-        // µØÍ¼³õÊ¼»¯
+        // åœ°å›¾åˆå§‹åŒ–
         mMapView = (MapView) findViewById(R.id.bmapView);
         mBaiduMap = mMapView.getMap();
-        // ¿ªÆô¶¨Î»Í¼²ã
+        // å¼€å¯å®šä½å›¾å±‚
         mBaiduMap.setMyLocationEnabled(true);
-        // ¶¨Î»³õÊ¼»¯
+        // å®šä½åˆå§‹åŒ–
         mLocClient = new LocationClient(this);
         mLocClient.registerLocationListener(myLocationListener);
         LocationClientOption option = new LocationClientOption();
-        option.setOpenGps(true); // ´ò¿ªgps
-	    option.setLocationNotify(true);//¿ÉÑ¡£¬Ä¬ÈÏfalse£¬ÉèÖÃÊÇ·ñµ±gpsÓĞĞ§Ê±°´ÕÕ1S1´ÎÆµÂÊÊä³öGPS½á¹û
-	    option.setIgnoreKillProcess(true);//¿ÉÑ¡£¬Ä¬ÈÏtrue£¬¶¨Î»SDKÄÚ²¿ÊÇÒ»¸öSERVICE£¬²¢·Åµ½ÁË¶ÀÁ¢½ø³Ì£¬ÉèÖÃÊÇ·ñÔÚstopµÄÊ±ºòÉ±ËÀÕâ¸ö½ø³Ì£¬Ä¬ÈÏ²»É±ËÀ  
-        option.setCoorType("bd09ll"); // ÉèÖÃ×ø±êÀàĞÍ
+        option.setOpenGps(true); // æ‰“å¼€gps;
+        option.setLocationNotify(true);//å¯é€‰ï¼Œé»˜è®¤falseï¼Œè®¾ç½®æ˜¯å¦å½“gpsæœ‰æ•ˆæ—¶æŒ‰ç…§1S1æ¬¡é¢‘ç‡è¾“å‡ºGPSç»“æœ
+        option.setIgnoreKillProcess(true);//å¯é€‰ï¼Œé»˜è®¤trueï¼Œå®šä½SDKå†…éƒ¨æ˜¯ä¸€ä¸ªSERVICEï¼Œå¹¶æ”¾åˆ°äº†ç‹¬ç«‹è¿›ç¨‹ï¼Œè®¾ç½®æ˜¯å¦åœ¨stopçš„æ—¶å€™æ€æ­»è¿™ä¸ªè¿›ç¨‹ï¼Œé»˜è®¤ä¸æ€æ­»
+        option.setCoorType("bd09ll"); // è®¾ç½®åæ ‡ç±»å‹
         option.setScanSpan(5000);
         mLocClient.setLocOption(option);
 
+        rundata = new Rundata(this,"myDB.db",null,1);
+        rundata.getWritableDatabase();
+
     }
-    
+
+    OnCheckedChangeListener radioButtonListener = new OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            if (checkedId == R.id.defaulticon) {
+                // ä¼ å…¥nullåˆ™ï¼Œæ¢å¤é»˜è®¤å›¾æ ‡
+                mCurrentMarker = null;
+                mBaiduMap
+                        .setMyLocationConfigeration(new MyLocationConfiguration(
+                                mCurrentMode, true, null));
+            }
+            if (checkedId == R.id.customicon) {
+                // ä¿®æ”¹ä¸ºè‡ªå®šä¹‰marker
+                mCurrentMarker = BitmapDescriptorFactory
+                        .fromResource(R.drawable.icon_geo);
+                mBaiduMap
+                        .setMyLocationConfigeration(new MyLocationConfiguration(
+                                mCurrentMode, true, mCurrentMarker,
+                                accuracyCircleFillColor, accuracyCircleStrokeColor));
+            }
+        }
+    };
+
+
     OnClickListener requestListener = new OnClickListener() {
         public void onClick(View v) {
             switch (mCurrentMode) {
                 case NORMAL:
-                    requestLocButton.setText("¸úËæ");
+                    requestLocButton.setText("è·Ÿéš");
                     mCurrentMode = LocationMode.FOLLOWING;
                     mBaiduMap
                             .setMyLocationConfigeration(new MyLocationConfiguration(
                                     mCurrentMode, true, mCurrentMarker));
                     break;
                 case COMPASS:
-                    requestLocButton.setText("ÆÕÍ¨");
+                    requestLocButton.setText("æ™®é€š");
                     mCurrentMode = LocationMode.NORMAL;
                     mBaiduMap
                             .setMyLocationConfigeration(new MyLocationConfiguration(
                                     mCurrentMode, true, mCurrentMarker));
                     break;
                 case FOLLOWING:
-                    requestLocButton.setText("ÂŞÅÌ");
+                    requestLocButton.setText("ç½—ç›˜");
                     mCurrentMode = LocationMode.COMPASS;
                     mBaiduMap
                             .setMyLocationConfigeration(new MyLocationConfiguration(
@@ -122,43 +153,49 @@ public class RunActivity extends Activity {
     };
     OnClickListener startListener = new OnClickListener()
     {
-    	public void onClick(View v)
-    	{
+        public void onClick(View v)
+        {
 
-    		if (mLocClient.isStarted()) 
-    		{
-    		     startButton.setText("¿ªÊ¼");
-    		     mLocClient.stop();
-    		}else 
-    		{
-    		     startButton.setText("Í£Ö¹");
-    		     mLocClient.start();
-    		     handler.post(task);
-    		}
-    	}
+            if (isStart)
+            {
+                startButton.setText("å¼€å§‹");
+                isStart=false;
+                mLocClient.stop();
+                showData();
+            }else
+            {
+                isStart=true;
+                startButton.setText("åœæ­¢");
+                rundata.insert("keven", "2016", 1, 80, 80);
+                Toast.makeText(RunActivity.this, "add Successed!", Toast.LENGTH_SHORT).show();
+
+                mLocClient.start();
+                //handler.post(task);
+            }
+        }
     };
 
     /**
-     * ¶¨Î»SDK¼àÌıº¯Êı
+     * å®šä½SDKç›‘å¬å‡½æ•°
      */
     public class MyLocationListenner implements BDLocationListener {
 
         @Override
         public void onReceiveLocation(BDLocation location) {
-            // map view Ïú»Ùºó²»ÔÚ´¦ÀíĞÂ½ÓÊÕµÄÎ»ÖÃ
+            // map view é”€æ¯åä¸åœ¨å¤„ç†æ–°æ¥æ”¶çš„ä½ç½®
             if (location == null || mMapView == null) {
                 return;
             }
             MyLocationData locData = new MyLocationData.Builder()
                     .accuracy(location.getRadius())
-                            // ´Ë´¦ÉèÖÃ¿ª·¢Õß»ñÈ¡µ½µÄ·½ÏòĞÅÏ¢£¬Ë³Ê±Õë0-360
+                            // æ­¤å¤„è®¾ç½®å¼€å‘è€…è·å–åˆ°çš„æ–¹å‘ä¿¡æ¯ï¼Œé¡ºæ—¶é’ˆ0-360
                     .direction(100).latitude(location.getLatitude())
                     .longitude(location.getLongitude()).build();
             mBaiduMap.setMyLocationData(locData);
             Log.d("GEO",Double.toString(locData.latitude));
-            Log.d("GEO",Double.toString(locData.longitude));
-            Log.d("GEO",Double.toString(location.getOperators()));
-            
+            Log.d("GEO", Double.toString(locData.longitude));
+            Log.d("GEO", Double.toString(location.getOperators()));
+
             StringBuffer sb = new StringBuffer(256);
             sb.append("Time : ");
             sb.append(location.getTime());
@@ -171,18 +208,18 @@ public class RunActivity extends Activity {
             sb.append("\nRadius : ");
             sb.append(location.getRadius());
             if (location.getLocType() == BDLocation.TypeGpsLocation){
-             sb.append("\nSpeed : ");
-             sb.append(location.getSpeed());
-             sb.append("\nSatellite : ");
-             sb.append(location.getSatelliteNumber());
+                sb.append("\nSpeed : ");
+                sb.append(location.getSpeed());
+                sb.append("\nSatellite : ");
+                sb.append(location.getSatelliteNumber());
             } else if (location.getLocType() == BDLocation.TypeNetWorkLocation){
-             sb.append("\nAddress : ");
-             sb.append(location.getAddrStr());
+                sb.append("\nAddress : ");
+                sb.append(location.getAddrStr());
             }
             LOCATION_COUTNS ++;
-            sb.append("\n¼ì²éÎ»ÖÃ¸üĞÂ´ÎÊı£º");
+            sb.append("\næ£€æŸ¥ä½ç½®æ›´æ–°æ¬¡æ•°ï¼š");
             sb.append(String.valueOf(LOCATION_COUTNS));
-            
+
             TextViewLocInfo.setText(sb.toString());
             if (isFirstLoc) {
                 isFirstLoc = false;
@@ -197,14 +234,39 @@ public class RunActivity extends Activity {
         public void onReceivePoi(BDLocation poiLocation) {
         }
     }
-    private Runnable task = new Runnable() {  
-        public void run() {   
+    private Runnable task = new Runnable() {
+        public void run() {
             // TODO Auto-generated method stub
-                handler.postDelayed(this,5*1000);//ÉèÖÃÑÓ³ÙÊ±¼ä£¬´Ë´¦ÊÇ5Ãë
-                Log.d("GEO","restart");
-                mLocClient.requestLocation();
-        }   
+            handler.postDelayed(this,5*1000);//è®¾ç½®å»¶è¿Ÿæ—¶é—´ï¼Œæ­¤å¤„æ˜¯5ç§’
+            Log.d("GEO","restart");
+            mLocClient.requestLocation();
+        }
     };
+
+    public void showData()
+    {
+        Cursor cursor=rundata.select();
+        if (cursor.moveToFirst()) {
+            do {
+                String user = cursor.getString(cursor
+                        .getColumnIndex("user"));
+                String time = cursor.getString(cursor
+                        .getColumnIndex("time"));
+                int seq = cursor.getInt(cursor
+                        .getColumnIndex("seq"));
+                double longitude = cursor.getDouble(cursor
+                        .getColumnIndex("longitude"));
+                double latitude = cursor.getDouble(cursor
+                        .getColumnIndex("latitude"));
+                Log.d("myDB", user);
+                Log.d("myDB", time);
+                Log.d("myDB", Integer.toString(seq));
+                Log.d("myDB", Double.toString(longitude));
+                Log.d("myDB", Double.toString(latitude));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+    }
 
 
     @Override
@@ -221,9 +283,9 @@ public class RunActivity extends Activity {
 
     @Override
     protected void onDestroy() {
-        // ÍË³öÊ±Ïú»Ù¶¨Î»
+        // é€€å‡ºæ—¶é”€æ¯å®šä½
         mLocClient.stop();
-        // ¹Ø±Õ¶¨Î»Í¼²ã
+        // å…³é—­å®šä½å›¾å±‚
         mBaiduMap.setMyLocationEnabled(false);
         mMapView.onDestroy();
         mMapView = null;
