@@ -35,20 +35,23 @@ public final class R {
         public static final int title_btn_pressed=0x7f020011;
     }
     public static final class id {
-        public static final int action_settings=0x7f080020;
+        public static final int action_settings=0x7f080025;
         public static final int bmapView=0x7f080014;
         public static final int button_checkcode=0x7f080012;
         public static final int button_find_password=0x7f080001;
         public static final int button_forget_password=0x7f080006;
         public static final int button_i_need_register=0x7f080013;
         public static final int button_login=0x7f080004;
-        public static final int button_recommend_method=0x7f08001d;
-        public static final int button_recommend_user=0x7f08001c;
+        public static final int button_recommend_method=0x7f080022;
+        public static final int button_recommend_user=0x7f080021;
         public static final int button_register=0x7f080005;
-        public static final int button_register_run=0x7f08001e;
-        public static final int button_register_updown=0x7f08001f;
+        public static final int button_register_run=0x7f080023;
+        public static final int button_register_updown=0x7f080024;
         public static final int button_run_change=0x7f080018;
         public static final int button_run_start=0x7f08001a;
+        public static final int button_updown_count=0x7f08001f;
+        public static final int button_updown_start=0x7f08001b;
+        public static final int button_updown_time=0x7f08001e;
         public static final int customicon=0x7f080017;
         public static final int defaulticon=0x7f080016;
         public static final int editText_forget_password_email=0x7f080000;
@@ -58,6 +61,7 @@ public final class R {
         public static final int editText_register_userName=0x7f08000b;
         public static final int editText_register_userPassword=0x7f08000d;
         public static final int editText_register_userPassword_again=0x7f08000e;
+        public static final int editText_updown_number=0x7f08001d;
         public static final int editText_userName=0x7f080002;
         public static final int editText_userPassword=0x7f080003;
         public static final int fragment_network=0x7f080008;
@@ -65,7 +69,8 @@ public final class R {
         public static final int fragment_register=0x7f080007;
         public static final int indicator=0x7f08000a;
         public static final int linearLayout1=0x7f080010;
-        public static final int lv=0x7f08001b;
+        public static final int linearLayout2=0x7f08001c;
+        public static final int lv=0x7f080020;
         public static final int radioGroup=0x7f080015;
         public static final int textView_geo=0x7f080019;
     }
@@ -75,9 +80,10 @@ public final class R {
         public static final int activity_main=0x7f030002;
         public static final int activity_register=0x7f030003;
         public static final int activity_run=0x7f030004;
-        public static final int fragment_network=0x7f030005;
-        public static final int fragment_recommend=0x7f030006;
-        public static final int fragment_register=0x7f030007;
+        public static final int activity_updown=0x7f030005;
+        public static final int fragment_network=0x7f030006;
+        public static final int fragment_recommend=0x7f030007;
+        public static final int fragment_register=0x7f030008;
     }
     public static final class menu {
         public static final int login=0x7f070000;
@@ -119,6 +125,9 @@ public final class R {
         public static final int tab_network=0x7f060021;
         public static final int tab_recommend=0x7f060022;
         public static final int tab_register=0x7f060023;
+        public static final int updown_button_start=0x7f060024;
+        public static final int updown_number=0x7f060025;
+        public static final int updown_time=0x7f060026;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

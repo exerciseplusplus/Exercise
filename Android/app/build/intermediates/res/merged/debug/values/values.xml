@@ -42,6 +42,9 @@
     <string name="tab_network">朋友圈</string>
     <string name="tab_recommend">推荐</string>
     <string name="tab_register">签到</string>
+    <string name="updown_button_start">开始</string>
+    <string name="updown_number">个俯卧撑</string>
+    <string name="updown_time">使用时间</string>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
