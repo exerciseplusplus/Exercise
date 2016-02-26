@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\libs\baidumapapi_radar_v3_7_0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="15ca4625795ed40520a94e7ef1aa53791f9e17fe">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_radar_v3_7_0-5a4e560ad142b66ab89a45e8070086bbec136204.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\libs\baidumapapi_cloud_v3_7_0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6d11ba6426881d142f67c539d8a13d19446ac895">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_cloud_v3_7_0-b5219008b254db0f89077ea73ccafdf98adcadaa.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\libs\baidumapapi_util_v3_7_0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="72003ec5efa50c2e02266e1ad7ebefaca7d017d6">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_util_v3_7_0-c3b16cdf0dda9f632d5dd41bbf25635893699ee3.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\classes-969a790d15bd4d695237c5d2f01e4bae6e0b5a9c.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\libs\locSDK_6.13.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="2cdb37444b41b42e1ce5a8a27e5d3c22e1c57479">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\locSDK_6.13-f267d849bb2bdb1adad3769105a5fbcbea4374ee.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\libs\baidumapapi_search_v3_7_0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="934d5f6ca26f082fbe8bf17767caa530e37d1dfa">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_search_v3_7_0-5d6a377811c385d3fd67061f192b9eb764de1d01.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\libs\baidumapapi_base_v3_7_0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="18e10945278df7f556e2e336a826b0db965dce51">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_base_v3_7_0-07142e22f91314fa330456c7ac66e5e178561033.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\libs\avospush-v2.6.9.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5bd308075cce1d7d9d59b7739fd32766e11d30af">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\avospush-v2.6.9.1-b3f20499e1d1ba175570567e853d5ec940da8931.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\libs\avossearch-v2.6.9.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1db5ee9e5a1f5a1c16a52dda061f33c8966de09a">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\avossearch-v2.6.9.1-f7396fd7d1bec0311224d46362111fbda983e9f3.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-010e330e26e282621a8c9647b2002fe7ad975baf.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\libs\fastjson.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d449ce9b6023c059db09be5170229162a77e007a">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\fastjson-48a84b6821a7689e76e4ccf6ade6a3fb8b21c243.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\libs\avosstatistics-v2.6.9.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d91909b2b9101320b53cf84587f89aa9a0f10a21">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\avosstatistics-v2.6.9.1-a43e159c5522c9e5b8675a467311ee45f545367e.jar" />
+    </item>
+    <item
+        jar="C:\Users\SONY\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-05794064ba98783ec1494eca3eeff0beba959c80.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\libs\baidumapapi_map_v3_7_0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="534f8d224f352bba70229230b79028cab1e7859c">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_map_v3_7_0-d36535d4c2690a007d463c0229b4e5e20549f528.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\classes-b02102e0402f02023dc01e25ad3dcd680587f344.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\libs\android-async-http-1.4.6.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.6-3c0a9d210ff1cadc3d8b846738197b06e6d9e4bd.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\libs\avoscloud-v2.6.9.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="51ac785b56bf3fe221d976e63b5e39ed3731bb2a">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\avoscloud-v2.6.9.1-baedc4e10b86744dc2062e3bcc1b79ed89ac97ad.jar" />
+    </item>
+    <item
+        jar="E:\AndroidPrac\Exercise-master\Android\app\libs\httpmime-4.2.4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="dba4d4d224e2ca872af5be8d2992777583145478">
+        <dex dex="E:\AndroidPrac\Exercise-master\Android\app\build\intermediates\pre-dexed\debug\httpmime-4.2.4-60b5586d1639d57b790c8b92d59c3b5d6c66fc75.jar" />
+    </item>
+
+</items>
