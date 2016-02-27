@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+	<gradient 
+		android:startColor="#FFACDAE5"
+		android:endColor="#FF72CAE1"
+		android:angle="45"
+	/>
+</shape><!-- From: file:/E:/AndroidPrac/Exercise-master/Android/app/src/main/res/drawable-hdpi/background_login.xml -->

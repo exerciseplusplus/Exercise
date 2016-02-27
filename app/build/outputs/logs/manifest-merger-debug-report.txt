@@ -88,7 +88,7 @@ MERGED from [com.android.support:support-v4:23.1.1] E:\AndroidPrac\Exercise-mast
 	android:icon
 		ADDED from E:\AndroidPrac\Exercise-master\Android\app\src\main\AndroidManifest.xml:29:9-45
 	android:theme
-		ADDED from E:\AndroidPrac\Exercise-master\Android\app\src\main\AndroidManifest.xml:31:9-40
+		ADDED from E:\AndroidPrac\Exercise-master\Android\app\src\main\AndroidManifest.xml:31:9-50
 	android:name
 		ADDED from E:\AndroidPrac\Exercise-master\Android\app\src\main\AndroidManifest.xml:27:9-34
 meta-data#com.baidu.lbsapi.API_KEY

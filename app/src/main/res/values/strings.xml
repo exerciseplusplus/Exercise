@@ -51,6 +51,11 @@
     <string name="updown_number">个俯卧撑</string>
     <string name="updown_time">使用时间</string>
 
+    <string name="login_label_username">帐号</string>
+    <string name="login_label_password">密码</string>
+    <string name="login_label_signin">登 录</string>
+    <string name="login_status_logging_in">登录中...</string>
+    <string name="login_username_hint">Email或手机号</string>
 
 
 </resources>
