@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_login"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button_register_run"
+        android:layout_width="fill_parent"
+        android:layout_height="260dp"
+        android:background="@drawable/runnninggirl"
+        android:text="@string/fragment_register_run"
+        android:gravity="bottom|center_horizontal"
+        android:textAlignment="gravity"
+        android:textColor="#101010" />
+
+    <Button
+        android:id="@+id/button_register_updown"
+        android:layout_width="fill_parent"
+        android:layout_height="258dp"
+        android:background="@drawable/fuwocheng"
+        android:gravity="bottom|center_horizontal"
+        android:text="@string/fragment_register_updown"
+        android:textColor="#101010" />
+
+</LinearLayout><!-- From: file:/E:/AndroidPrac/Exercise-master/Android/app/src/main/res/layout/fragment_register.xml -->
