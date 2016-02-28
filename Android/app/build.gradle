@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
+    compileSdkVersion 23
     buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "com.example.exercise"
         minSdkVersion 14
-        targetSdkVersion 19
+        targetSdkVersion 23
     }
 
     buildTypes {
@@ -23,7 +23,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.android.support:appcompat-v7:23.1.1'
     compile files('libs/android-async-http-1.4.6.jar')
     compile files('libs/avoscloud-v2.6.9.1.jar')
     compile files('libs/avospush-v2.6.9.1.jar')

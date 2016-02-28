@@ -6,20 +6,26 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background_login"
     tools:context=".RegisterActivity" >
 
     <EditText
         android:id="@+id/editText_register_userName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_login_div_bg"
+        android:singleLine="true"
         android:hint="@string/login_input_user_name" >
     </EditText>
 
     <EditText
         android:id="@+id/editText_register_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_login_div_bg"
         android:layout_alignLeft="@+id/editText_register_userName"
         android:layout_below="@+id/editText_register_userName"
         android:ems="10"
@@ -29,8 +35,10 @@
 
     <EditText
         android:id="@+id/editText_register_userPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_login_div_bg"
         android:layout_alignLeft="@+id/editText_register_email"
         android:layout_below="@+id/editText_register_email"
         android:ems="10"
@@ -40,8 +48,10 @@
 
     <EditText
         android:id="@+id/editText_register_userPassword_again"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_login_div_bg"
         android:layout_alignLeft="@+id/editText_register_userPassword"
         android:layout_below="@+id/editText_register_userPassword"
         android:ems="10"
@@ -51,8 +61,10 @@
 
     <EditText
         android:id="@+id/editText_register_phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_login_div_bg"
         android:layout_alignLeft="@+id/editText_register_userPassword_again"
         android:layout_below="@+id/editText_register_userPassword_again"
         android:ems="10"
@@ -70,15 +82,19 @@
         <EditText
             android:id="@+id/editText_register_checkcode"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
+            android:background="@drawable/background_login_div_bg"
             android:hint="@string/register_input_user_checkcode" >
         </EditText>
 
         <Button
             android:id="@+id/button_checkcode"
             android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/btn_style_normal"
             android:text="@string/register_input_user_checkcode_button" />
     </LinearLayout>
 
@@ -86,8 +102,11 @@
         android:id="@+id/button_i_need_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linearLayout1"
+        android:text="@string/login_button_register"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/btn_style_normal"
         android:layout_below="@+id/linearLayout1"
-        android:text="@string/login_button_register" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

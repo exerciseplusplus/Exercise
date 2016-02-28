@@ -1,54 +1,99 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".LoginActivity" >
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_login">
+    <!-- padding 内边距   layout_margin 外边距
+        android:layout_alignParentTop 布局的位置是否处于顶部 -->
 
-    <EditText
-        android:id="@+id/editText_userName"
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:id="@+id/login_div"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/login_input_user_name" >
-    </EditText>
+        android:padding="15dip"
+        android:layout_margin="15dip"
+        android:background="@drawable/background_login_div_bg" >
+        <!-- 账号 -->
+        <TextView
+            android:id="@+id/login_user_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/login_label_username"
+            style="@style/normalText"/>
+        <EditText
+            android:id="@+id/editText_userName"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint="@string/login_username_hint"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/login_user_input"
+            android:background="@drawable/background_login_div_bg"
+            android:singleLine="true"
+            android:inputType="text"/>
+        <!-- 密码 text -->
+        <TextView
+            android:id="@+id/login_password_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/editText_userName"
+            android:text="@string/login_label_password"
+            style="@style/normalText"/>
+        <EditText
+            android:id="@+id/editText_userPassword"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/login_password_input"
+            android:background="@drawable/background_login_div_bg"
+            android:password="true"
+            android:singleLine="true"
+            android:inputType="textPassword" />
+        <!-- 登录button -->
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/editText_userPassword"
+            android:layout_alignRight="@id/editText_userPassword"
+            android:text="@string/login_label_signin"
+            android:background="@drawable/btn_style_normal" />
+    </RelativeLayout>
 
-    <EditText
-        android:id="@+id/editText_userPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText_userName"
-        android:layout_below="@+id/editText_userName"
-        android:ems="10"
-        android:hint="@string/login_input_user_password"
-        android:inputType="textPassword" >
-    </EditText>
-
-    <Button
-        android:id="@+id/button_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText_userPassword"
-        android:layout_below="@+id/editText_userPassword"
-        android:text="@string/login_button_login" />
-
-    <Button
-        android:id="@+id/button_register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button_login"
-        android:layout_below="@+id/button_login"
-        android:text="@string/login_button_register" />
-
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="221dp" >
+        <Button  android:id="@+id/button_register"
+            android:text="没有账号？注册"
+            android:background="#00000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:textColor="#888" />
+        <ImageView android:id="@+id/miniTwitter_logo"
+            android:src="@drawable/cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="25dp" />
+    </RelativeLayout>
     <Button
         android:id="@+id/button_forget_password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button_register"
-        android:layout_below="@+id/button_register"
-        android:text="@string/login_button_forget_password" />
-
-</RelativeLayout><!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/layout/activity_login.xml -->
+        android:layout_height="62dp"
+        android:text="@string/login_button_forget_password"
+        android:textSize="15.0sp"
+        android:textColor="@color/gray"
+        android:background="#00000000"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</LinearLayout><!-- From: file:/E:/AndroidPrac/Exercise-master/Android/app/src/main/res/layout/activity_login.xml -->
