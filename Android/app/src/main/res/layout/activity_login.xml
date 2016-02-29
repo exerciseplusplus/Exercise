@@ -7,7 +7,15 @@
     android:background="@drawable/background_login">
     <!-- padding 内边距   layout_margin 外边距
         android:layout_alignParentTop 布局的位置是否处于顶部 -->
-
+    <ImageView android:id="@+id/miniTwitter_logo"
+        android:src="@drawable/logobg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp" />
     <RelativeLayout
         android:id="@+id/login_div"
         android:layout_width="fill_parent"
@@ -59,15 +67,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textColor="@color/black"
             android:layout_below="@id/editText_userPassword"
             android:layout_alignRight="@id/editText_userPassword"
             android:text="@string/login_label_signin"
             android:background="@drawable/btn_style_normal" />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="221dp" >
         <Button  android:id="@+id/button_register"
             android:text="没有账号？注册"
             android:background="#00000000"
@@ -75,16 +81,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:textColor="#888" />
-        <ImageView android:id="@+id/miniTwitter_logo"
-            android:src="@drawable/cat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="25dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="25dp" />
-    </RelativeLayout>
+
+
     <Button
         android:id="@+id/button_forget_password"
         android:layout_width="match_parent"

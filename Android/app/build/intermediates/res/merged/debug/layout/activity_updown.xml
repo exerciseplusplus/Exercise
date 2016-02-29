@@ -13,6 +13,7 @@
         android:id="@+id/button_updown_start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:background="@drawable/btn_style_normal"
         android:text="@string/updown_button_start" />
 
@@ -39,6 +40,7 @@
             android:id="@+id/button_updown_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:background="@drawable/btn_style_normal"
             android:text="@string/updown_time" />
     </LinearLayout>
@@ -48,7 +50,8 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/linearLayout2"
+        android:textColor="@color/black"
         android:background="@drawable/btn_style_normal"
         android:clickable="true" />
 </RelativeLayout>
-<!-- From: file:/E:/AndroidPrac/Exercise-master/Android/app/src/main/res/layout/activity_updown.xml -->
+<!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/layout/activity_updown.xml -->

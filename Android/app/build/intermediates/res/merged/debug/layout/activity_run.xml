@@ -47,6 +47,7 @@
         android:id="@+id/button_run_change"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="25dp"
@@ -66,9 +67,10 @@
         android:id="@+id/button_run_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_alignLeft="@+id/button_run_change"
         android:background="@drawable/btn_style_normal"
         android:layout_below="@+id/textView_geo"
         android:text="开始"/>
 
-</RelativeLayout><!-- From: file:/E:/AndroidPrac/Exercise-master/Android/app/src/main/res/layout/activity_run.xml -->
+</RelativeLayout><!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/layout/activity_run.xml -->

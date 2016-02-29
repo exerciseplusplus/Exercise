@@ -3,5 +3,6 @@
     <color name="background_color">#ffdbdada</color>
     <color name="white">#ffffffff</color>
     <color name="listcolor">#4c566c</color>
+    <color name="black">#000000</color>
     <color name="gray">#b2b6bd</color>
 </resources>
