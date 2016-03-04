@@ -1,76 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <com.baidu.mapapi.map.MapView
-        android:id="@+id/bmapView"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:clickable="true" />
 
     <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="80dip"
-        android:background="#D000"
-        android:minWidth="100dip"
-        android:orientation="vertical"
-        android:padding="2dp" >
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="120dip"
+        android:orientation="horizontal">
 
-        <RadioGroup
-            android:id="@+id/radioGroup"
+        <Button
+            android:id="@+id/button_run_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="定位icon" >
+            android:textColor="@color/black"
+            android:background="@drawable/btn_style_normal"
+            android:text="开始"/>
 
-            <RadioButton
-                android:id="@+id/defaulticon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="默认图标" >
-            </RadioButton>
+        <TextView
+            android:id="@+id/textView_geo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/run_info" />
 
-            <RadioButton
-                android:id="@+id/customicon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="自定义图标" >
-            </RadioButton>
-        </RadioGroup>
+        <Chronometer
+            android:id="@+id/chronometer_run_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:background="@drawable/btn_style_normal" />
+
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_run_change"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="25dp"
-        android:background="@drawable/btn_style_normal"
-        android:layout_marginTop="10dip" />
+    <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true" />
 
-    <TextView
-        android:id="@+id/textView_geo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linearLayout1"
-        android:layout_below="@+id/linearLayout1"
-        android:layout_marginTop="33dp"
-        android:text="TextView" />
-    
-    <Button
-        android:id="@+id/button_run_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_alignLeft="@+id/button_run_change"
-        android:background="@drawable/btn_style_normal"
-        android:layout_below="@+id/textView_geo"
-        android:text="开始"/>
 
-</RelativeLayout>
+</LinearLayout>

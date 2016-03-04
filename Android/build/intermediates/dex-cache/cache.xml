@@ -2,130 +2,130 @@
 <items version="2" >
 
     <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\libs\android-async-http-1.4.6.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.6-a230a6cc98b8e53f540cb7c4d3cf8b8b9d8fe3fd.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\libs\avospush-v2.6.9.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="5bd308075cce1d7d9d59b7739fd32766e11d30af">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\avospush-v2.6.9.1-ffb6d3e840347da78d7cb9fc0cc4fe4bbf9a4ed9.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\libs\baidumapapi_radar_v3_7_0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="15ca4625795ed40520a94e7ef1aa53791f9e17fe">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_radar_v3_7_0-6c54ec55ed9bacd2e231abf3b93420b959508f81.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\libs\avosstatistics-v2.6.9.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="d91909b2b9101320b53cf84587f89aa9a0f10a21">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\avosstatistics-v2.6.9.1-9bb71662c1e329499a2105143eb5b672103fa10b.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\libs\avossearch-v2.6.9.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="1db5ee9e5a1f5a1c16a52dda061f33c8966de09a">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\avossearch-v2.6.9.1-52f403af4bf5d298402f86b102710820104f1048.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\libs\baidumapapi_map_v3_7_0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="534f8d224f352bba70229230b79028cab1e7859c">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_map_v3_7_0-fcddb6a5c89e8927b8f159094ee19c9359edd0b2.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\libs\baidumapapi_cloud_v3_7_0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="6d11ba6426881d142f67c539d8a13d19446ac895">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_cloud_v3_7_0-ed3a78f87550c72092451de7e55fba8424c38ea3.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\classes-410fbf7eb78ae28d0bb1fea4c0e7a81aac3582e5.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\libs\baidumapapi_base_v3_7_0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="18e10945278df7f556e2e336a826b0db965dce51">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_base_v3_7_0-cdb89aa761d0def8050682d15e5fdfcc5f28dcb1.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\libs\baidumapapi_util_v3_7_0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="72003ec5efa50c2e02266e1ad7ebefaca7d017d6">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_util_v3_7_0-a0f4345d3bcbf3ac572ada85b3dbb8b3c22c3f9c.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-f97471c4b6857a44fe1f1bbd330774c3a65b4558.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\libs\httpmime-4.2.4.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="dba4d4d224e2ca872af5be8d2992777583145478">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\httpmime-4.2.4-0a8e9bb6221937af4e14067defefda7730f377b1.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\libs\avoscloud-v2.6.9.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="51ac785b56bf3fe221d976e63b5e39ed3731bb2a">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\avoscloud-v2.6.9.1-cdf4ce8c3b8391f87513432413f6e404aa5eda1c.jar" />
-    </item>
-    <item
-        jar="C:\Users\SONY\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-05794064ba98783ec1494eca3eeff0beba959c80.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\libs\locSDK_6.13.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="2cdb37444b41b42e1ce5a8a27e5d3c22e1c57479">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\locSDK_6.13-250dde948fa5b1d172c70a14862421e717354b21.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\libs\fastjson.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="d449ce9b6023c059db09be5170229162a77e007a">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\fastjson-5ef615577131f825d3f264630e75d7a2981cc086.jar" />
-    </item>
-    <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jar="E:\myproject\android\Exercise\Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\classes-ceb88e567bc0e5e230242599e05f3f3ef310a95f.jar" />
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\classes-5625821701a1e871201f3b398064ab8a9f94b21d.jar" />
     </item>
     <item
-        jar="E:\AndroidPrac\Exercise\Exercise\Android\app\libs\baidumapapi_search_v3_7_0.jar"
+        jar="E:\myproject\android\Exercise\Android\app\libs\baidumapapi_map_v3_7_0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="534f8d224f352bba70229230b79028cab1e7859c">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_map_v3_7_0-6a95a5b9bc8ee605c6846abda6373d01b0fd7ec9.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\libs\avosstatistics-v2.6.9.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d91909b2b9101320b53cf84587f89aa9a0f10a21">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\avosstatistics-v2.6.9.1-8fa6814522ef571053ad2021924a0f69a39dd08f.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\libs\baidumapapi_base_v3_7_0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="18e10945278df7f556e2e336a826b0db965dce51">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_base_v3_7_0-d69929688fedcda0835f2bd98dd6b1cdc1cc737d.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\libs\baidumapapi_search_v3_7_0.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="934d5f6ca26f082fbe8bf17767caa530e37d1dfa">
-        <dex dex="E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_search_v3_7_0-cf44c49be2ec14a387f902b0da0b578c4491916e.jar" />
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_search_v3_7_0-88ea920045cd7b2fd668dafe9209cf8a693b7f17.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-8fb6fadbbc6a41c95d2452e61c213a7b9d750443.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\libs\httpmime-4.2.4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="dba4d4d224e2ca872af5be8d2992777583145478">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\httpmime-4.2.4-637ed501ab04c37f53e317efcedd7c9be1e2ce2c.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\classes-376aff0410dc063358078f8f1dcffd4e53a944cd.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\libs\android-async-http-1.4.6.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.6-8201f15b655d7792d7339b0aba1c729303f4f0d7.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\libs\avospush-v2.6.9.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5bd308075cce1d7d9d59b7739fd32766e11d30af">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\avospush-v2.6.9.1-b89bc9f8ca0e8d19d72cbc869da09de1376ad86f.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\libs\baidumapapi_radar_v3_7_0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="15ca4625795ed40520a94e7ef1aa53791f9e17fe">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_radar_v3_7_0-87744ce070387b25dd733a1f2c29e3378e9a25f8.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\libs\avossearch-v2.6.9.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1db5ee9e5a1f5a1c16a52dda061f33c8966de09a">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\avossearch-v2.6.9.1-a834ec06f7b6ab100a3a2ace09f541a21e3b832a.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\libs\baidumapapi_cloud_v3_7_0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6d11ba6426881d142f67c539d8a13d19446ac895">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_cloud_v3_7_0-0b5798acefb79aa5321f770c521c40486d3a870b.jar" />
+    </item>
+    <item
+        jar="D:\android-sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-e3108ecb54182c743a13315fa31aa8da2f6d288d.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\libs\fastjson.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d449ce9b6023c059db09be5170229162a77e007a">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\fastjson-ae47be4648c8cb1e36f42a8df827201325cd5aca.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\libs\avoscloud-v2.6.9.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="51ac785b56bf3fe221d976e63b5e39ed3731bb2a">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\avoscloud-v2.6.9.1-618e6d4c7476d98c61863248461e9f1dbf2dcef7.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\libs\baidumapapi_util_v3_7_0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="72003ec5efa50c2e02266e1ad7ebefaca7d017d6">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\baidumapapi_util_v3_7_0-916b8f3b9e65b00965e23f16052966c224aa4cb3.jar" />
+    </item>
+    <item
+        jar="E:\myproject\android\Exercise\Android\app\libs\locSDK_6.13.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="2cdb37444b41b42e1ce5a8a27e5d3c22e1c57479">
+        <dex dex="E:\myproject\android\Exercise\Android\app\build\intermediates\pre-dexed\debug\locSDK_6.13-3e970577c61ab73ff257a366d8411aab63e2614d.jar" />
     </item>
 
 </items>

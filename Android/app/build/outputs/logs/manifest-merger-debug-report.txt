@@ -1,161 +1,173 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:2:1-76:12
-	xmlns:android
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:2:11-69
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:2:1-79:12
 	package
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:3:5-35
-		INJECTED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:5:5-30
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:5:5-30
 	android:versionCode
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:4:5-28
-		INJECTED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:23.1.1] E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:23.1.1] E:\myproject\android\Exercise\Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] E:\myproject\android\Exercise\Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:9:9-38
-		INJECTED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:9:9-38
+		INJECTED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:8:9-35
-		INJECTED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:8:9-35
+		INJECTED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:11:5-81
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:11:22-78
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:11:22-78
 uses-permission#android.permission.WRITE_SETTINGS
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:12:5-73
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:12:5-73
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:12:22-70
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:12:22-70
 uses-permission#android.permission.WRITE_PROFILE
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:13:5-72
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:13:5-72
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:13:22-69
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:13:22-69
 uses-permission#android.permission.INTERNET
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:14:5-67
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:14:5-67
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:14:22-64
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:14:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:15:5-79
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:15:5-79
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:15:22-76
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:15:22-76
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:16:5-75
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:16:5-75
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:16:22-72
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:16:22-72
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:17:5-76
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:17:5-76
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:17:22-73
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:17:22-73
 uses-permission#com.android.launcher.permission.READ_SETTINGS
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:18:5-85
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:18:5-85
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:18:22-82
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:18:22-82
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:19:5-81
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:19:5-81
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:19:22-78
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:19:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:20:5-79
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:20:5-79
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:20:22-76
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:20:22-76
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:21:5-84
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:21:5-84
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:21:22-81
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:21:22-81
 uses-permission#android.permission.GET_TASKS
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:22:5-68
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:22:5-68
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:22:22-65
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:22:22-65
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:24:5-80
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:23:5-80
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:24:22-77
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:23:22-77
 application
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:26:5-74:19
-MERGED from [com.android.support:appcompat-v7:23.1.1] E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] E:\AndroidPrac\Exercise\Exercise\Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:25:5-77:19
+MERGED from [com.android.support:appcompat-v7:23.1.1] E:\myproject\android\Exercise\Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] E:\myproject\android\Exercise\Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:30:9-41
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:29:9-41
 	android:allowBackup
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:28:9-35
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:27:9-35
 	android:icon
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:29:9-45
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:28:9-45
 	android:theme
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:31:9-50
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:30:9-50
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:27:9-34
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:26:9-34
 meta-data#com.baidu.lbsapi.API_KEY
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:32:9-34:56
-	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:33:13-52
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:31:9-33:56
 	android:value
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:34:13-53
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:33:13-53
+	android:name
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:32:13-52
 service#com.avos.avoscloud.PushService
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:36:9-66
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:35:9-66
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:36:18-63
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:35:18-63
 receiver#com.avos.avoscloud.AVBroadcastReceiver
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:38:9-43:20
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:37:9-42:20
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:38:19-72
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:37:19-72
 intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.USER_PRESENT
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:39:13-42:29
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:38:13-41:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:40:17-79
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:39:17-79
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:40:25-76
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:39:25-76
 action#android.intent.action.USER_PRESENT
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:41:17-77
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:40:17-77
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:41:25-74
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:40:25-74
 activity#com.example.exercise.LoginActivity
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:45:9-53:20
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:44:9-47:20
 	android:label
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:47:13-45
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:46:13-45
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:46:13-42
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:48:13-52:29
-action#android.intent.action.MAIN
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:49:17-69
-	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:49:25-66
-category#android.intent.category.LAUNCHER
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:51:17-77
-	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:51:27-74
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:45:13-42
 activity#com.example.exercise.RegisterActivity
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:54:9-58:20
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:48:9-51:20
 	android:label
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:56:13-45
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:50:13-45
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:55:13-45
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:49:13-45
 activity#com.example.exercise.ForgetPasswdActivity
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:59:9-62:20
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:52:9-55:20
 	android:label
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:61:13-45
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:54:13-45
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:60:13-49
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:53:13-49
 activity#com.example.exercise.MainActivity
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:63:9-67:20
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:56:9-64:20
 	android:label
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:65:13-45
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:58:13-45
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:64:13-41
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:57:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:59:13-63:29
+action#android.intent.action.MAIN
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:60:17-69
+	android:name
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:60:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:62:17-77
+	android:name
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:62:27-74
 activity#com.example.exercise.RunActivity
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:68:9-71:20
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:65:9-68:20
 	android:label
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:70:13-45
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:67:13-45
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:69:13-40
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:66:13-40
 activity#com.example.exercise.UpdownActivity
-ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:72:9-73:20
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:69:9-70:20
 	android:name
-		ADDED from E:\AndroidPrac\Exercise\Exercise\Android\app\src\main\AndroidManifest.xml:72:19-49
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:69:19-49
+activity#com.example.exercise.RunRecordActivity
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:71:9-72:20
+	android:name
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:71:19-52
+activity#com.example.exercise.RecordDetailActivity
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:73:9-74:20
+	android:name
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:73:19-55
+activity#com.example.exercise.UpdownRecordActivity
+ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:75:9-76:20
+	android:name
+		ADDED from E:\myproject\android\Exercise\Android\app\src\main\AndroidManifest.xml:75:19-55

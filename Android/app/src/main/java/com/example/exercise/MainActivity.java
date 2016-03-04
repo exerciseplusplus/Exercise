@@ -1,11 +1,17 @@
 package com.example.exercise;
 
 
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVObject;
+import com.avos.avoscloud.AVUser;
+import com.avos.avoscloud.LogInCallback;
 import com.example.exercise.FragmentIndicator.OnIndicateListener;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 
@@ -17,6 +23,18 @@ public class MainActivity extends FragmentActivity {
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         setFragmentIndicator(0);
+
+        String username="keven";
+        String password="521521";
+        AVUser.logInInBackground(username, password, new LogInCallback() {
+            public void done(AVUser user, AVException e) {
+                if (e == null) {
+                    Log.d("Login", "Login successfully");
+
+                }
+            }
+        });
+
     }
 
     /**

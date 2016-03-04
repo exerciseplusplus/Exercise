@@ -36,13 +36,12 @@
             android:text="@string/updown_number" >
         </EditText>
 
-        <Button
-            android:id="@+id/button_updown_time"
+        <Chronometer
+            android:id="@+id/chronometer_updown_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:background="@drawable/btn_style_normal"
-            android:text="@string/updown_time" />
+            android:background="@drawable/btn_style_normal" />
     </LinearLayout>
 
     <Button

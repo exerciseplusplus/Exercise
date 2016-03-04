@@ -36,13 +36,12 @@
             android:text="@string/updown_number" >
         </EditText>
 
-        <Button
-            android:id="@+id/button_updown_time"
+        <Chronometer
+            android:id="@+id/chronometer_updown_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:background="@drawable/btn_style_normal"
-            android:text="@string/updown_time" />
+            android:background="@drawable/btn_style_normal" />
     </LinearLayout>
 
     <Button
@@ -54,4 +53,4 @@
         android:background="@drawable/btn_style_normal"
         android:clickable="true" />
 </RelativeLayout>
-<!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/layout/activity_updown.xml -->
+<!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/layout/activity_updown.xml -->

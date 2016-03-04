@@ -13,7 +13,8 @@ public class Rundata extends SQLiteOpenHelper {
 
     public final static String RUN_ID = "id";
     public final static String RUN_USER = "user";
-    public final static String RUN_TIME = "time";
+    public final static String RUN_TIME = "starttime";
+    public final static String RUN_TIME2 = "nowtime";
     public final static String RUN_SEQ = "seq";
     public final static String RUN_LONGITUDE = "longitude";
     public final static String RUN_LATITUDE = "latitude";
@@ -22,7 +23,8 @@ public class Rundata extends SQLiteOpenHelper {
     public static final String CREATE_RUN = "create table Run_table ("
             + "id integer primary key autoincrement, "
             + "user text, "
-            + "time text, "
+            + "starttime text, "
+            + "nowtime text, "
             + "seq integer, "
             + "longitude real, "
             + "latitude real)";
@@ -46,12 +48,13 @@ public class Rundata extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public long insert(String userName,String time,int seq,double longitude,double latitude)
+    public long insert(String userName,String time,String time2,int seq,double longitude,double latitude)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(RUN_USER, userName);
         cv.put(RUN_TIME, time);
+        cv.put(RUN_TIME2, time2);
         cv.put(RUN_SEQ, seq);
         cv.put(RUN_LONGITUDE, longitude);
         cv.put(RUN_LATITUDE, latitude);
@@ -63,11 +66,17 @@ public class Rundata extends SQLiteOpenHelper {
     public Cursor select() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db
-                .query(TABLE_NAME, null, null, null, null, null, null);
+                .query(TABLE_NAME, null, null, null, null, null, null, null);
         return cursor;
     }
 
-    public void update(int id, String userName,String time,int seq,double longitude,double latitude)
+    public Cursor query(String time) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select * from Run_table where starttime=?",new String[]{time});
+        return cursor;
+    }
+
+    public void update(int id, String userName,String time,String time2,int seq,double longitude,double latitude)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         String where = RUN_ID + " = ?";
@@ -76,6 +85,7 @@ public class Rundata extends SQLiteOpenHelper {
         ContentValues cv = new ContentValues();
         cv.put(RUN_USER, userName);
         cv.put(RUN_TIME, time);
+        cv.put(RUN_TIME2, time2);
         cv.put(RUN_SEQ, seq);
         cv.put(RUN_LONGITUDE, longitude);
         cv.put(RUN_LATITUDE, latitude);

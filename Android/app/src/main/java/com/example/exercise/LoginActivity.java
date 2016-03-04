@@ -68,24 +68,34 @@ public class LoginActivity extends Activity {
 		public void onClick(View arg0) {
 	      String username = userNameEditText.getText().toString();
 	      String password = userPasswordEditText.getText().toString();
-		  AVUser.logInInBackground(username,password,new LogInCallback() {
-				public void done(AVUser user, AVException e) {
-					if (user!=null)
-					{
-						progressDialogShow();
-						Log.d("Login", "Login successfully");
-						showLogin(R.string.dialog_message_title,R.string.dialog_text_wait);
-						
-						Intent intent =new Intent(LoginActivity.this,MainActivity.class);
-						startActivity(intent);
-						finish();
-					}
-					else
-					{
-						showLogin(R.string.dialog_message_title,R.string.error_login_failed);
-					}
+		  if (!password.isEmpty()) {
+				if (!username.isEmpty()) {
+					AVUser.logInInBackground(username,password,new LogInCallback() {
+						public void done(AVUser user, AVException e) {
+							if (e==null)
+							{
+								progressDialogShow();
+								Log.d("Login", "Login successfully");
+								showLogin(R.string.dialog_message_title,R.string.dialog_text_wait);
+
+								Intent intent =new Intent(LoginActivity.this,MainActivity.class);
+								startActivity(intent);
+								finish();
+							}
+							else
+							{
+								showLogin(R.string.dialog_message_title,R.string.error_login_failed);
+							}
+						}
+					});
 				}
-		  	});
+				else {
+					showLogin(R.string.dialog_message_title,R.string.error_register_user_name_null);
+				}
+		  }
+			else{
+			  showLogin(R.string.dialog_message_title,R.string.error_register_password_null);
+		  }
 		}
 	};
 	@SuppressWarnings({ "unchecked", "rawtypes" })
@@ -93,7 +103,6 @@ public class LoginActivity extends Activity {
 		public void onClick(View arg0) {
 			Intent intent =new Intent(LoginActivity.this,RegisterActivity.class);
 			startActivity(intent);
-			finish();
 		}
 	};
 	@SuppressWarnings({ "unchecked", "rawtypes" })
@@ -101,7 +110,6 @@ public class LoginActivity extends Activity {
 		public void onClick(View arg0) {
 			Intent intent =new Intent(LoginActivity.this,ForgetPasswdActivity.class);
 			startActivity(intent);
-			finish();
 		}
 	     
 	};

@@ -77,10 +77,8 @@ public class RegisterFragment extends Fragment{
     	public void onClick(View arg0) {
     		Log.d("Register","Hello");
     		//startAlarm();
-			Intent intent =new Intent(mActivity,RunActivity.class);
+			Intent intent =new Intent(mActivity,RunRecordActivity.class);
 			startActivity(intent);
-    		
-    	
     	}
     };
 
@@ -88,7 +86,7 @@ public class RegisterFragment extends Fragment{
     {
     	public void onClick(View arg0) {
     		Log.d("Register","World");
-            Intent intent =new Intent(mActivity,UpdownActivity.class);
+            Intent intent =new Intent(mActivity,UpdownRecordActivity.class);
             startActivity(intent);
     	
     	}

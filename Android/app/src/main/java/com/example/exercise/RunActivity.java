@@ -7,6 +7,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.location.Location;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -14,10 +15,17 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVObject;
+import com.avos.avoscloud.AVUser;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -33,9 +41,10 @@ import com.baidu.mapapi.map.MyLocationConfiguration.LocationMode;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
 
-/**
- * 此demo用来展示如何结合定位SDK实现定位，并使用MyLocationOverlay绘制定位位置 同时展示如何使用自定义图标绘制并点击时弹出泡泡
- */
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class RunActivity extends Activity {
 
     // 定位相关
@@ -52,31 +61,34 @@ public class RunActivity extends Activity {
     BaiduMap mBaiduMap;
 
     // UI相关
-    Button requestLocButton;
     Button startButton;
     boolean isFirstLoc = true; // 是否首次定位
     boolean isStart = false; // 是否开始定位
+    boolean reStart=false;  //是否重新定位
     TextView TextViewLocInfo;
+    Chronometer chronometer;
 
     //存储相关
+    AVUser avuser=AVUser.getCurrentUser();
     Rundata rundata ;
     Cursor mCursor;
-
+    String startTime;
+    Date time=new Date(System.currentTimeMillis());
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_run);
-        requestLocButton = (Button) findViewById(R.id.button_run_change);
+
         startButton = (Button) findViewById(R.id.button_run_start);
         TextViewLocInfo = (TextView)findViewById(R.id.textView_geo);
         mCurrentMode = LocationMode.NORMAL;
-        requestLocButton.setText("普通");
 
-        requestLocButton.setOnClickListener(requestListener);
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        startTime  =  df.format(time);
+        chronometer=(Chronometer)findViewById(R.id.chronometer_run_time);
+        chronometer.setFormat("计时时间:(%s)");
+
         startButton.setOnClickListener(startListener);
-
-        RadioGroup group = (RadioGroup) this.findViewById(R.id.radioGroup);
-        group.setOnCheckedChangeListener(radioButtonListener);
 
         // 地图初始化
         mMapView = (MapView) findViewById(R.id.bmapView);
@@ -99,78 +111,49 @@ public class RunActivity extends Activity {
 
     }
 
-    OnCheckedChangeListener radioButtonListener = new OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-            if (checkedId == R.id.defaulticon) {
-                // 传入null则，恢复默认图标
-                mCurrentMarker = null;
-                mBaiduMap
-                        .setMyLocationConfigeration(new MyLocationConfiguration(
-                                mCurrentMode, true, null));
-            }
-            if (checkedId == R.id.customicon) {
-                // 修改为自定义marker
-                mCurrentMarker = BitmapDescriptorFactory
-                        .fromResource(R.drawable.icon_geo);
-                mBaiduMap
-                        .setMyLocationConfigeration(new MyLocationConfiguration(
-                                mCurrentMode, true, mCurrentMarker,
-                                accuracyCircleFillColor, accuracyCircleStrokeColor));
-            }
-        }
-    };
 
 
-    OnClickListener requestListener = new OnClickListener() {
-        public void onClick(View v) {
-            switch (mCurrentMode) {
-                case NORMAL:
-                    requestLocButton.setText("跟随");
-                    mCurrentMode = LocationMode.FOLLOWING;
-                    mBaiduMap
-                            .setMyLocationConfigeration(new MyLocationConfiguration(
-                                    mCurrentMode, true, mCurrentMarker));
-                    break;
-                case COMPASS:
-                    requestLocButton.setText("普通");
-                    mCurrentMode = LocationMode.NORMAL;
-                    mBaiduMap
-                            .setMyLocationConfigeration(new MyLocationConfiguration(
-                                    mCurrentMode, true, mCurrentMarker));
-                    break;
-                case FOLLOWING:
-                    requestLocButton.setText("罗盘");
-                    mCurrentMode = LocationMode.COMPASS;
-                    mBaiduMap
-                            .setMyLocationConfigeration(new MyLocationConfiguration(
-                                    mCurrentMode, true, mCurrentMarker));
-                    break;
-                default:
-                    break;
-            }
-        }
-    };
+
     OnClickListener startListener = new OnClickListener()
     {
         public void onClick(View v)
         {
-
             if (isStart)
             {
                 startButton.setText("开始");
-                isStart=false;
                 mLocClient.stop();
-                showData();
+                //showData();
+                isStart=false;
+                reStart=true;
+                chronometer.stop();
+                computeData();
             }else
             {
-                isStart=true;
-                startButton.setText("停止");
-                rundata.insert("keven", "2016", 1, 80, 80);
-                Toast.makeText(RunActivity.this, "add Successed!", Toast.LENGTH_SHORT).show();
+                if (reStart)
+                {
 
-                mLocClient.start();
-                //handler.post(task);
+                    isStart=true;
+                    startButton.setText("停止");
+                    chronometer.setBase(SystemClock.elapsedRealtime());
+                    chronometer.start();
+                    mLocClient.start();
+
+                }
+                else
+                {
+                    isStart=true;
+                    startButton.setText("停止");
+                    chronometer.setBase(SystemClock.elapsedRealtime());
+                    chronometer.start();
+
+                    mLocClient.start();
+                    //handler.post(task);
+                    // Toast.makeText(RunActivity.this, "add Successed!", Toast.LENGTH_SHORT).show();
+                }
+                time=new Date(System.currentTimeMillis());
+                DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                startTime  =  df.format(time);
+
             }
         }
     };
@@ -186,6 +169,7 @@ public class RunActivity extends Activity {
             if (location == null || mMapView == null) {
                 return;
             }
+            LOCATION_COUTNS ++;
             MyLocationData locData = new MyLocationData.Builder()
                     .accuracy(location.getRadius())
                             // 此处设置开发者获取到的方向信息，顺时针0-360
@@ -216,19 +200,24 @@ public class RunActivity extends Activity {
                 sb.append("\nAddress : ");
                 sb.append(location.getAddrStr());
             }
-            LOCATION_COUTNS ++;
+
             sb.append("\n检查位置更新次数：");
             sb.append(String.valueOf(LOCATION_COUTNS));
 
             TextViewLocInfo.setText(sb.toString());
             if (isFirstLoc) {
                 isFirstLoc = false;
+                startTime=location.getTime();
                 LatLng ll = new LatLng(location.getLatitude(),
                         location.getLongitude());
                 MapStatus.Builder builder = new MapStatus.Builder();
                 builder.target(ll).zoom(18.0f);
                 mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
             }
+
+            rundata.insert(avuser.getUsername(), startTime,location.getTime(), LOCATION_COUTNS, location.getLongitude(), location.getLatitude());
+//            rundata.insert(avuser.getUsername(), startTime,location.getTime(), LOCATION_COUTNS+1, location.getLongitude()+0.005, location.getLatitude()+0.005);
+//            rundata.insert(avuser.getUsername(), startTime,location.getTime(), LOCATION_COUTNS+2, location.getLongitude()-0.005, location.getLatitude()+0.01);
         }
 
         public void onReceivePoi(BDLocation poiLocation) {
@@ -243,29 +232,83 @@ public class RunActivity extends Activity {
         }
     };
 
-    public void showData()
+    public void computeData()
     {
-        Cursor cursor=rundata.select();
+        int i=0;
+        Date d1=null;
+        double olatitude=0,olongitude=0,distance=0,duration=0;
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        try{
+            d1 = df.parse(startTime);
+        }
+        catch (Exception e)
+        {
+        }
+        Cursor cursor=rundata.query(startTime);
         if (cursor.moveToFirst()) {
             do {
+
                 String user = cursor.getString(cursor
                         .getColumnIndex("user"));
                 String time = cursor.getString(cursor
-                        .getColumnIndex("time"));
+                        .getColumnIndex("nowtime"));
                 int seq = cursor.getInt(cursor
                         .getColumnIndex("seq"));
                 double longitude = cursor.getDouble(cursor
                         .getColumnIndex("longitude"));
                 double latitude = cursor.getDouble(cursor
                         .getColumnIndex("latitude"));
-                Log.d("myDB", user);
+                Log.d("myDB", startTime);
                 Log.d("myDB", time);
                 Log.d("myDB", Integer.toString(seq));
                 Log.d("myDB", Double.toString(longitude));
                 Log.d("myDB", Double.toString(latitude));
+
+                try{
+                    d1 = df.parse(startTime);
+                    Date d2 = df.parse(time);
+                    duration = (d2.getTime() - d1.getTime())/1000;
+                }
+                catch (Exception e)
+                {
+                }
+
+
+                if (i==0)
+                {
+                    olatitude=latitude;
+                    olongitude=longitude;
+                    i=1;
+                }
+                else
+                {
+                    float[] results=new float[1];
+                    Location.distanceBetween(latitude, longitude, olatitude, olongitude, results);
+                    distance+= results[0];
+                    olatitude=latitude;
+                    olongitude=longitude;
+                }
+
             } while (cursor.moveToNext());
         }
+
         cursor.close();
+        Log.d("myDB", Double.toString(distance));
+        Log.d("myDB", Double.toString(duration));
+
+        AVObject av =new AVObject("RunRecord");
+        av.put("duration", duration);
+        av.put("distance", distance);
+        av.put("timestamp", d1);
+
+        AVUser avUser=AVUser.getCurrentUser();
+        Log.d("myDB", avUser.getObjectId());
+        JSONObject jo=new JSONObject();
+        jo.put("ClassName","_User");
+        jo.put("objectId", avUser.getObjectId());
+        av.put("user",avUser);
+        av.saveInBackground();
+
     }
 
 
