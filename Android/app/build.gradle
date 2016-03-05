@@ -24,18 +24,15 @@ android {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
-    compile files('libs/android-async-http-1.4.6.jar')
-    compile files('libs/avoscloud-v2.6.9.1.jar')
-    compile files('libs/avospush-v2.6.9.1.jar')
-    compile files('libs/avossearch-v2.6.9.1.jar')
-    compile files('libs/avosstatistics-v2.6.9.1.jar')
+
     compile files('libs/baidumapapi_base_v3_7_0.jar')
-    compile files('libs/baidumapapi_cloud_v3_7_0.jar')
     compile files('libs/baidumapapi_map_v3_7_0.jar')
-    compile files('libs/baidumapapi_radar_v3_7_0.jar')
-    compile files('libs/baidumapapi_search_v3_7_0.jar')
-    compile files('libs/baidumapapi_util_v3_7_0.jar')
-    compile files('libs/fastjson.jar')
-    compile files('libs/httpmime-4.2.4.jar')
     compile files('libs/locSDK_6.13.jar')
+
+    compile files('libs/avospush-v2.6.9.1.jar')
+
+    compile 'cn.leancloud.android:avoscloud-sdk:v3.0+'
+    compile 'com.jakewharton:butterknife:6.1.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
+    compile files('libs/prettytime-3.2.5.Final.jar')
 }

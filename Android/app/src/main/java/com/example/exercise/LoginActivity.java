@@ -1,6 +1,6 @@
 package com.example.exercise;
 
-import com.avos.avoscloud.AVAnalytics;
+//import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVUser;
@@ -51,7 +51,7 @@ public class LoginActivity extends Activity {
         });
         */
 
-		AVAnalytics.trackAppOpened(getIntent());
+//		AVAnalytics.trackAppOpened(getIntent());
 
 		loginButton = (Button) findViewById(R.id.button_login);
 		registerButton = (Button) findViewById(R.id.button_register);

@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.exercise.ui.*;
+
 public class RecommendFragment extends Fragment {
 
 	private View mParent;
@@ -63,6 +65,7 @@ public class RecommendFragment extends Fragment {
 	{
 		public void onClick(View arg0) {
 			Log.d("Recommend", "Hello");
+
 		}
 	};
 

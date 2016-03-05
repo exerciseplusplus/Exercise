@@ -1,11 +1,14 @@
 package com.example.exercise;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.exercise.ui.StatusListActivity;
 
 public class NetworkFragment extends Fragment {
 
@@ -45,6 +48,8 @@ public class NetworkFragment extends Fragment {
 		super.onActivityCreated(savedInstanceState);
 		mParent = getView();
 		mActivity = getActivity();
+		Intent intent =new Intent(mActivity, com.example.exercise.ui.LoginActivity.class);
+		startActivity(intent);
 
 	}
 

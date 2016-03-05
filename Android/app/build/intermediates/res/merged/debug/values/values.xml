@@ -42,6 +42,11 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="dark_tree_green">#428666</color>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
@@ -88,12 +93,21 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="status_background">#FFA</color>
+    <color name="status_color">#FFFF0000</color>
+    <color name="status_like_pink">#ff6868</color>
+    <color name="status_text">#000</color>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <eat-comment/>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/color.xml -->
     <eat-comment/>
+    <color name="tree_green">#5CB98D</color>
     <color name="white">#ffffffff</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
@@ -196,6 +210,7 @@
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="avatarSize">50dp</dimen>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
@@ -206,6 +221,14 @@
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="radius">5dp</dimen>
+    <dimen name="status_imageMaxSize">100dp</dimen>
+    <dimen name="status_layout_avatar_size">60dp</dimen>
+    <dimen name="status_like_size">22dp</dimen>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <eat-comment/>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
@@ -244,6 +267,7 @@
     <eat-comment/>
     <string name="action_settings">设置</string>
     <string name="app_name">Exercise+</string>
+    <string name="cancel">取消</string>
     <string name="dialog_message_title">提示</string>
     <string name="dialog_text_wait">登陆成功</string>
     <string name="error_forget_email">邮件发送错误，请确认您的邮件地址</string>
@@ -257,6 +281,7 @@
     <string name="error_register_password_null">密码不可为空</string>
     <string name="error_register_user_name_null">用户名不可空</string>
     <string name="error_register_user_name_repeat">用户名已被注册，请重新填写</string>
+    <string name="find_people">找人</string>
     <string name="forget_email_send">邮件发送成功，请注意查收</string>
     <string name="forget_password_find_password_button">发送邮件</string>
     <string name="forget_password_find_password_email">请输入邮件地址</string>
@@ -264,6 +289,8 @@
     <string name="fragment_recommend_user">好友推荐</string>
     <string name="fragment_register_run">跑步签到</string>
     <string name="fragment_register_updown">俯卧撑签到</string>
+    <string name="hardLoading">努力加载中...</string>
+    <string name="listEmptyHint">无数据</string>
     <string name="login_button_forget_password">忘记密码？</string>
     <string name="login_button_login">登录</string>
     <string name="login_button_register">注册</string>
@@ -274,6 +301,9 @@
     <string name="login_label_username">帐号</string>
     <string name="login_status_logging_in">登录中...</string>
     <string name="login_username_hint">Email或手机号</string>
+    <string name="noMore">没有更多了</string>
+    <string name="ok">好的</string>
+    <string name="person_activity_title">个人主页</string>
     <string name="register_input_user_checkcode">请输入验证码</string>
     <string name="register_input_user_checkcode_button">发送手机验证码</string>
     <string name="register_input_user_email">请输入电子邮箱</string>
@@ -282,11 +312,27 @@
     <string name="run_button_start">开始跑步</string>
     <string name="run_info">跑步数据</string>
     <string name="run_record_title">跑步记录</string>
+    <string name="status_addImage">添加图片</string>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="status_cancelFollow">取消关注</string>
+    <string name="status_cancelImage">取消图片</string>
+    <string name="status_chat">发起会话</string>
+    <string name="status_deleteStatusTips">要删除这条状态吗</string>
+    <string name="status_follow">关注</string>
+    <string name="status_followStatus">关注状态</string>
+    <string name="status_follower_desc">Ta关注了你</string>
+    <string name="status_followers">粉丝</string>
+    <string name="status_following">关注</string>
+    <string name="status_following_desc">已关注</string>
+    <string name="status_list_title">广场</string>
+    <string name="status_menu_send">说两句</string>
+    <string name="status_mutual_follow">互相关注</string>
+    <string name="status_none_follow_desc">无</string>
+    <string name="status_send">发送</string>
     <string name="success_register_success">注册成功</string>
     <string name="tab_network">朋友圈</string>
     <string name="tab_recommend">推荐</string>
@@ -296,6 +342,8 @@
     <string name="updown_record_button_start">开始做俯卧撑</string>
     <string name="updown_record_title">俯卧撑记录</string>
     <string name="updown_time">使用时间</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
@@ -313,6 +361,10 @@
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="Avatar">
+        <item name="android:layout_width">@dimen/avatarSize</item>
+        <item name="android:layout_height">@dimen/avatarSize</item>
     </style>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
@@ -1584,6 +1636,19 @@
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/styles.xml -->
     <eat-comment/>
+    <style name="btn_green">
+        <item name="android:background">@drawable/btn_green</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+    <style name="btn_green.status_menu">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
     <style name="normalText" parent="@android:style/TextAppearance">
         <item name="android:textColor">#444</item>
         <item name="android:textSize">14sp</item>

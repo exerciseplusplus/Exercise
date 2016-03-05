@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
 
-import com.alibaba.fastjson.JSONObject;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVUser;
 

@@ -1,6 +1,6 @@
 package com.example.exercise;
 
-import com.avos.avoscloud.AVAnalytics;
+//import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVUser;
@@ -35,7 +35,7 @@ public class ForgetPasswdActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_forget_password);
 
-		AVAnalytics.trackAppOpened(getIntent());
+//		AVAnalytics.trackAppOpened(getIntent());
 
 	
 		forgetButton = (Button) findViewById(R.id.button_find_password);

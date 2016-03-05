@@ -4,4 +4,13 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+
+    <dimen name="avatarSize">50dp</dimen>
+
+    <dimen name="status_layout_avatar_size">60dp</dimen>
+    <dimen name="status_imageMaxSize">100dp</dimen>
+    <dimen name="status_like_size">22dp</dimen>
+
+    <dimen name="radius">5dp</dimen>
+	
 </resources>

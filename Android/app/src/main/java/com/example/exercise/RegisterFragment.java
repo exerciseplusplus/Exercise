@@ -31,7 +31,6 @@ public class RegisterFragment extends Fragment{
 
     private View mParent;  
     private FragmentActivity mActivity;
-    static AppConfig  app;
 	
 	Button runButton;
 	Button updownButton;

@@ -20,9 +20,6 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVUser;
@@ -303,9 +300,6 @@ public class RunActivity extends Activity {
 
         AVUser avUser=AVUser.getCurrentUser();
         Log.d("myDB", avUser.getObjectId());
-        JSONObject jo=new JSONObject();
-        jo.put("ClassName","_User");
-        jo.put("objectId", avUser.getObjectId());
         av.put("user",avUser);
         av.saveInBackground();
 

@@ -1,6 +1,6 @@
 package com.example.exercise;
 
-import com.avos.avoscloud.AVAnalytics;
+//import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVMobilePhoneVerifyCallback;
 import com.avos.avoscloud.AVOSCloud;
@@ -44,7 +44,7 @@ public class RegisterActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_register);
 
-		AVAnalytics.trackAppOpened(getIntent());
+//		AVAnalytics.trackAppOpened(getIntent());
 
 	
 		registerButton = (Button) findViewById(R.id.button_i_need_register);
