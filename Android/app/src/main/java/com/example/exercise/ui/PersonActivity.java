@@ -12,11 +12,18 @@ import butterknife.InjectView;
 import butterknife.OnClick;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
+import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.FollowCallback;
-import com.example.exercise.*;
+
+import com.example.exercise.App;
+import com.example.exercise.Status;
+import com.example.exercise.StatusNetAsyncTask;
+import com.example.exercise.StatusService;
+import com.example.exercise.StatusUtils;
 import com.example.exercise.ui.base.BaseListView;
 import com.example.exercise.ui.StatusListAdapter;
+import com.example.exercise.ui.PersonProfileLayout;
 import com.example.exercise.R;
 import java.util.List;
 
@@ -26,7 +33,7 @@ public class PersonActivity extends Activity {
   public static final int FOLLOW = 1;
 
   @InjectView(R.id.profileLayout)
-  PersonProfileLayout personProfileLayout;
+  com.example.exercise.ui.PersonProfileLayout personProfileLayout;
 
   @InjectView(R.id.status_List)
   BaseListView<Status> statusList;

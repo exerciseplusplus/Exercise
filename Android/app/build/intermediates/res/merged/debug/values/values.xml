@@ -285,6 +285,8 @@
     <string name="forget_email_send">邮件发送成功，请注意查收</string>
     <string name="forget_password_find_password_button">发送邮件</string>
     <string name="forget_password_find_password_email">请输入邮件地址</string>
+    <string name="fragment_network_friend">查找好友</string>
+    <string name="fragment_network_share">分享广场</string>
     <string name="fragment_recommend_method">运动推荐</string>
     <string name="fragment_recommend_user">好友推荐</string>
     <string name="fragment_register_run">跑步签到</string>
@@ -304,6 +306,7 @@
     <string name="noMore">没有更多了</string>
     <string name="ok">好的</string>
     <string name="person_activity_title">个人主页</string>
+    <string name="recommend_user">推荐好友</string>
     <string name="register_input_user_checkcode">请输入验证码</string>
     <string name="register_input_user_checkcode_button">发送手机验证码</string>
     <string name="register_input_user_email">请输入电子邮箱</string>

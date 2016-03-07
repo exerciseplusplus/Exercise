@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.example.exercise.PersonProfileLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.exercise.ui.PersonProfileLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/profileLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -53,4 +53,4 @@
         android:src="@drawable/mm_submenu" />
 
 
-</com.example.exercise.PersonProfileLayout>
+</com.example.exercise.ui.PersonProfileLayout>

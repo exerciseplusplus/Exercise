@@ -54,10 +54,8 @@ public class StatusListActivity extends BaseActivity {
 
   @Override
   public boolean onMenuItemSelected(int featureId, MenuItem item) {
-    if (item.getItemId() == id.action_people) {
-      Intent intent = new Intent(this, UserListActivity.class);
-      startActivity(intent);
-    } else if (item.getItemId() == id.logout) {
+
+     if (item.getItemId() == id.logout) {
       AVUser.logOut();
       finish();
     }

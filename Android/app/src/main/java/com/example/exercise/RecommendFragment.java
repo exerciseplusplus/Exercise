@@ -65,6 +65,8 @@ public class RecommendFragment extends Fragment {
 	{
 		public void onClick(View arg0) {
 			Log.d("Recommend", "Hello");
+			Intent intent = new Intent(mActivity, RecommendUserActivity.class);
+			startActivity(intent);
 
 		}
 	};

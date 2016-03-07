@@ -2,8 +2,12 @@ package com.example.exercise;
 
 import android.app.Application;
 import android.content.Context;
+
+import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVOSCloud;
+import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.AVUser;
+import com.avos.avoscloud.FindCallback;
 import com.baidu.mapapi.SDKInitializer;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -28,14 +32,16 @@ public class App extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-    AVOSCloud.setDebugLogEnabled(true);
+
     AVOSCloud.initialize(this,
             "bbOVrjU0kGBQxkAqVLrENRJH-gzGzoHsz",
             "TrYcf9AP3jAsbKndb91oavzw");
+    AVOSCloud.setDebugLogEnabled(true);
     AVOSCloud.useAVCloudCN();
 
     initImageLoader(this);
     SDKInitializer.initialize(this);
+//    getAllUser();
   }
 
   public static void initImageLoader(Context context) {
@@ -58,5 +64,17 @@ public class App extends Application {
 
   public static AVUser lookupUser(String userId) {
     return userCache.get(userId);
+  }
+
+
+
+  public static void getAllUser()  {
+    AVQuery<AVUser> q = AVUser.getQuery();
+    q.findInBackground(new FindCallback<AVUser>() {
+      @Override
+      public void done(List<AVUser> alluserlist, AVException e) {
+        registerBatchUser(alluserlist);
+      }
+    });
   }
 }

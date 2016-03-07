@@ -22,6 +22,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.List;
+
 public class LoginActivity extends Activity {
 
 
@@ -61,11 +63,22 @@ public class LoginActivity extends Activity {
 		loginButton.setOnClickListener(loginListener);
 		registerButton.setOnClickListener(registerListener);
 		forgetButton.setOnClickListener(forgetListener);
+
+
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	OnClickListener loginListener = new OnClickListener() {
 		public void onClick(View arg0) {
+
+			AVUser.logInInBackground("keven", "521521", new LogInCallback() {
+				public void done(AVUser user, AVException e) {
+					if (e == null) {
+						Log.d("Login", "Login successfully");
+
+					}
+				}
+			});
 	      String username = userNameEditText.getText().toString();
 	      String password = userPasswordEditText.getText().toString();
 		  if (!password.isEmpty()) {
@@ -76,11 +89,12 @@ public class LoginActivity extends Activity {
 							{
 								progressDialogShow();
 								Log.d("Login", "Login successfully");
-								showLogin(R.string.dialog_message_title,R.string.dialog_text_wait);
+								showLogin(R.string.dialog_message_title, R.string.dialog_text_wait);
 
 								Intent intent =new Intent(LoginActivity.this,MainActivity.class);
 								startActivity(intent);
 								finish();
+								App.getAllUser();
 							}
 							else
 							{

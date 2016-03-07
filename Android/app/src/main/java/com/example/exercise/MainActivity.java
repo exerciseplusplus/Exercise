@@ -24,16 +24,6 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
         setFragmentIndicator(0);
 
-        String username="keven";
-        String password="521521";
-        AVUser.logInInBackground(username, password, new LogInCallback() {
-            public void done(AVUser user, AVException e) {
-                if (e == null) {
-                    Log.d("Login", "Login successfully");
-
-                }
-            }
-        });
 
     }
 

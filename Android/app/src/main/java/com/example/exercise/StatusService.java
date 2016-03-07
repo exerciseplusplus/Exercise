@@ -104,7 +104,7 @@ public class StatusService {
 
   public static List<AVUser> getFollowers(AVUser user, int skip, int limit) throws Exception {
     AVQuery<AVUser> q = AVUser.followerQuery(user.getObjectId(),
-        AVUser.class);
+            AVUser.class);
     q.skip(skip);
     q.limit(limit);
     q.include(App.FOLLOWER);
@@ -113,7 +113,7 @@ public class StatusService {
 
   public static List<AVUser> getFollowings(AVUser user, int skip, int limit) throws Exception {
     AVQuery<AVUser> q = AVUser.followeeQuery(user.getObjectId(),
-        AVUser.class);
+            AVUser.class);
     q.skip(skip);
     q.limit(limit);
     q.include(App.FOLLOWEE);
@@ -176,5 +176,28 @@ public class StatusService {
     q.limit(limit);
     q.orderByDescending("updatedAt");
     return q.find();
+  }
+
+  public static List<AVUser> recommendUsers(int skip, int limit) throws AVException {
+
+    AVQuery<AVObject> query = new AVQuery<AVObject>("UserRecommend");
+    AVUser currentUser = AVUser.getCurrentUser();
+    query.whereEqualTo("user", currentUser);
+    query.skip(skip);
+    query.limit(limit);
+    query.orderByDescending("updatedAt");
+    List<AVObject> object= query.find();
+
+    List<AVUser> userList =new  ArrayList<AVUser> ();
+    for (int i=0;i<object.size();i++)
+    {
+      AVObject recommend=object.get(i);
+      AVUser user = (AVUser)recommend.get("recommendUser");
+      String userId=user.getObjectId();
+      AVQuery<AVUser> q = AVUser.getQuery();
+      q.whereEqualTo("objectId",userId);
+      userList.add(q.getFirst());
+    }
+    return userList;
   }
 }
