@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/logout"
+        android:title="注销"
+        app:showAsAction="never" />
+</menu>
+<!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/menu/menu_main.xml -->

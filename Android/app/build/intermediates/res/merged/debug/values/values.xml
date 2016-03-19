@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -20,19 +20,19 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/color.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="background_color">#ffdbdada</color>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/color.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="black">#000000</color>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
@@ -42,10 +42,10 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/color.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="dark_tree_green">#428666</color>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
@@ -53,19 +53,19 @@
     <color name="dim_foreground_material_light">#ff323232</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/color.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="gray">#b2b6bd</color>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/color.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="listcolor">#4c566c</color>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
@@ -93,19 +93,19 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/color.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="status_background">#FFA</color>
     <color name="status_color">#FFFF0000</color>
     <color name="status_like_pink">#ff6868</color>
     <color name="status_text">#000</color>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/color.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="tree_green">#5CB98D</color>
     <color name="white">#ffffffff</color>
@@ -137,7 +137,7 @@
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/><attr format="reference" name="theme"/><attr name="android:theme"/></declare-styleable>
     <declare-styleable name="ViewBackgroundHelper"><attr name="android:background"/><attr format="color" name="backgroundTint"/><attr name="backgroundTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -206,12 +206,12 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="avatarSize">50dp</dimen>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
@@ -221,13 +221,13 @@
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="radius">5dp</dimen>
     <dimen name="status_imageMaxSize">100dp</dimen>
     <dimen name="status_layout_avatar_size">60dp</dimen>
     <dimen name="status_like_size">22dp</dimen>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <item name="action_bar_activity_content" type="id"/>
@@ -263,7 +263,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">设置</string>
     <string name="app_name">Exercise+</string>
@@ -316,10 +316,10 @@
     <string name="run_info">跑步数据</string>
     <string name="run_record_title">跑步记录</string>
     <string name="status_addImage">添加图片</string>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="status_cancelFollow">取消关注</string>
     <string name="status_cancelImage">取消图片</string>
@@ -347,13 +347,13 @@
     <string name="updown_time">使用时间</string>
     <string name="xlistview_footer_hint_normal">查看更多</string>
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
@@ -369,7 +369,7 @@
         <item name="android:layout_width">@dimen/avatarSize</item>
         <item name="android:layout_height">@dimen/avatarSize</item>
     </style>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -1637,7 +1637,7 @@
     <style name="Widget.AppCompat.TextView.SpinnerItem" parent="Base.Widget.AppCompat.TextView.SpinnerItem"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
-    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="btn_green">
         <item name="android:background">@drawable/btn_green</item>

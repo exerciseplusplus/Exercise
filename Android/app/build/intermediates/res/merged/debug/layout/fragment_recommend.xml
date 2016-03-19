@@ -22,4 +22,4 @@
         android:text="@string/fragment_recommend_method"
         android:textColor="@color/white"
         android:gravity="bottom|center_horizontal"/>
-</LinearLayout><!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/layout/fragment_recommend.xml -->
+</LinearLayout><!-- From: file:/E:/AndroidPrac/Exercise/Exercise/Android/app/src/main/res/layout/fragment_recommend.xml -->
