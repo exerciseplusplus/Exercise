@@ -2,6 +2,7 @@ package com.example.exercise;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -89,26 +90,52 @@ public class UpdownRecordActivity extends Activity {
         query.findInBackground(new FindCallback<AVObject>() {
             @Override
             public void done(List<AVObject> list2, AVException e) {
-                if(e==null)
-                {
-                    for(int i = 0; i < list2.size(); i++)
-                    {
-                        AVObject record=list2.get(i);
-                        Date datetime = (Date)record.get("timestamp");
+                if (e == null) {
+                    for (int i = 0; i < list2.size(); i++) {
+                        AVObject record = list2.get(i);
+                        Date datetime = (Date) record.get("timestamp");
                         DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                        String time  =  df.format(datetime);
+                        String time = df.format(datetime);
                         String duration = record.get("duration").toString();
                         String number = record.get("number").toString();
 
                         Map<String, Object> map = new HashMap<String, Object>();
-                        map.put("title", time+"——"+avUser.getUsername());
-                        map.put("info","锻炼时间——"+duration+"\n俯卧撑个数——"+number);
-                        map.put("img", R.drawable.ic_launcher);
+                        map.put("title", time + "——" + avUser.getUsername());
+                        map.put("info", "锻炼时间——" + duration + "\n俯卧撑个数——" + number);
+                        switch (i % 9 + 1) {
+                            case 1:
+                                map.put("img", R.drawable.one);
+                                break;
+                            case 2:
+                                map.put("img", R.drawable.two);
+                                break;
+                            case 3:
+                                map.put("img", R.drawable.three);
+                                break;
+                            case 4:
+                                map.put("img", R.drawable.four);
+                                break;
+                            case 5:
+                                map.put("img", R.drawable.five);
+                                break;
+                            case 6:
+                                map.put("img", R.drawable.six);
+                                break;
+                            case 7:
+                                map.put("img", R.drawable.seven);
+                                break;
+                            case 8:
+                                map.put("img", R.drawable.eight);
+                                break;
+                            case 9:
+                                map.put("img", R.drawable.nine);
+                                break;
+                        }
                         list.add(map);
 
                         Log.d("ListView", time);
-                        Log.d("ListView",duration);
-                        Log.d("ListView",number);
+                        Log.d("ListView", duration);
+                        Log.d("ListView", number);
 
                     }
                 }

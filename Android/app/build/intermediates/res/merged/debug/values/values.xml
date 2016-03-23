@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="http://schemas.android.com/tools">
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
@@ -42,6 +42,20 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.squareup/android-times-square/1.6.5/res/values/values.xml -->
+    <eat-comment/>
+    <color name="calendar_active_month_bg">#fff5f7f9</color>
+    <color name="calendar_bg">#ffffffff</color>
+    <color name="calendar_divider">#ffbababa</color>
+    <color name="calendar_highlighted_day_bg">#ccffcc</color>
+    <color name="calendar_inactive_month_bg">#ffd7d9db</color>
+    <color name="calendar_selected_day_bg">#ff379bff</color>
+    <color name="calendar_selected_range_bg">#ff96caff</color>
+    <color name="calendar_text_active">#ff778088</color>
+    <color name="calendar_text_highlighted">#ff778088</color>
+    <color name="calendar_text_inactive">#40778088</color>
+    <color name="calendar_text_selected">#ffffffff</color>
+    <color name="calendar_text_unselectable">#7f778088</color>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="dark_tree_green">#428666</color>
@@ -118,6 +132,7 @@
     <declare-styleable name="AlertDialog"><attr name="android:layout"/><attr format="reference" name="buttonPanelSideLayout"/><attr format="reference" name="listLayout"/><attr format="reference" name="multiChoiceItemLayout"/><attr format="reference" name="singleChoiceItemLayout"/><attr format="reference" name="listItemLayout"/></declare-styleable>
     <declare-styleable name="AppCompatTextView"><attr format="reference|boolean" name="textAllCaps"/><attr name="android:textAppearance"/></declare-styleable>
     <declare-styleable name="ButtonBarLayout"><attr format="boolean" name="allowStacking"/></declare-styleable>
+    <declare-styleable name="CalendarPickerView"><attr name="android:background"/><attr format="color" name="tsquare_dividerColor"/><attr format="reference" name="tsquare_dayBackground"/><attr format="color" name="tsquare_dayTextColor"/><attr format="color" name="tsquare_titleTextColor"/><attr format="boolean" name="tsquare_displayHeader"/><attr format="color" name="tsquare_headerTextColor"/></declare-styleable>
     <declare-styleable name="CompoundButton"><attr name="android:button"/><attr format="color" name="buttonTint"/><attr name="buttonTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="DrawerArrowToggle"><attr format="color" name="color"/><attr format="boolean" name="spinBars"/><attr format="dimension" name="drawableSize"/><attr format="dimension" name="gapBetweenBars"/><attr format="dimension" name="arrowHeadLength"/><attr format="dimension" name="arrowShaftLength"/><attr format="dimension" name="barLength"/><attr format="dimension" name="thickness"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers"><flag name="none" value="0"/><flag name="beginning" value="1"/><flag name="middle" value="2"/><flag name="end" value="4"/></attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
@@ -137,6 +152,7 @@
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/><attr format="reference" name="theme"/><attr name="android:theme"/></declare-styleable>
     <declare-styleable name="ViewBackgroundHelper"><attr name="android:background"/><attr format="color" name="backgroundTint"/><attr name="backgroundTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
+    <declare-styleable name="calendar_cell"><attr format="boolean" name="tsquare_state_selectable"/><attr format="boolean" name="tsquare_state_current_month"/><attr format="boolean" name="tsquare_state_today"/><attr format="boolean" name="tsquare_state_range_first"/><attr format="boolean" name="tsquare_state_range_middle"/><attr format="boolean" name="tsquare_state_range_last"/><attr format="boolean" name="tsquare_state_highlighted"/></declare-styleable>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
@@ -211,6 +227,13 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="avatarSize">50dp</dimen>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.squareup/android-times-square/1.6.5/res/values/values.xml -->
+    <eat-comment/>
+    <dimen name="calendar_day_headers_paddingbottom">4dp</dimen>
+    <dimen name="calendar_month_title_bottommargin">4dp</dimen>
+    <dimen name="calendar_month_topmargin">16dp</dimen>
+    <dimen name="calendar_text_medium">18sp</dimen>
+    <dimen name="calendar_text_small">14sp</dimen>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
@@ -234,6 +257,11 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.squareup/android-times-square/1.6.5/res/values/values.xml -->
+    <eat-comment/>
+    <item name="day_view_adapter_class" type="id"/>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <eat-comment/>
     <item name="home" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
@@ -268,6 +296,11 @@
     <string name="action_settings">设置</string>
     <string name="app_name">Exercise+</string>
     <string name="cancel">取消</string>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.squareup/android-times-square/1.6.5/res/values/values.xml -->
+    <eat-comment/>
+    <string name="day_name_format">EEE</string>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
     <string name="dialog_message_title">提示</string>
     <string name="dialog_text_wait">登陆成功</string>
     <string name="error_forget_email">邮件发送错误，请确认您的邮件地址</string>
@@ -292,6 +325,11 @@
     <string name="fragment_register_run">跑步签到</string>
     <string name="fragment_register_updown">俯卧撑签到</string>
     <string name="hardLoading">努力加载中...</string>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.squareup/android-times-square/1.6.5/res/values/values.xml -->
+    <eat-comment/>
+    <string name="invalid_date">Date must be between %1$s and %2$s.</string>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
     <string name="listEmptyHint">无数据</string>
     <string name="login_button_forget_password">忘记密码？</string>
     <string name="login_button_login">登录</string>
@@ -303,6 +341,11 @@
     <string name="login_label_username">帐号</string>
     <string name="login_status_logging_in">登录中...</string>
     <string name="login_username_hint">Email或手机号</string>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.squareup/android-times-square/1.6.5/res/values/values.xml -->
+    <eat-comment/>
+    <string name="month_name_format">MMMM yyyy</string>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
     <string name="noMore">没有更多了</string>
     <string name="ok">好的</string>
     <string name="person_activity_title">个人主页</string>
@@ -1306,6 +1349,27 @@
         <item name="android:minWidth">56dp</item>
         <item name="android:scaleType">center</item>
     </style>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.squareup/android-times-square/1.6.5/res/values/values.xml -->
+    <eat-comment/>
+    <style name="CalendarCell">
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textAlignment" ns1:targetApi="jelly_bean_mr1">center</item>
+  </style>
+    <style name="CalendarCell.CalendarDate">
+    <item name="android:textSize">@dimen/calendar_text_medium</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+    <style name="CalendarCell.DayHeader">
+    <item name="android:textSize">@dimen/calendar_text_small</item>
+  </style>
+    <style name="CalendarTitle">
+    <item name="android:textSize">@dimen/calendar_text_medium</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
+    <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
 

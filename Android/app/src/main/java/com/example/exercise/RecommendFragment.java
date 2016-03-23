@@ -75,6 +75,8 @@ public class RecommendFragment extends Fragment {
 	{
 		public void onClick(View arg0) {
 			Log.d("Recommend","World");
+			Intent intent = new Intent(mActivity, RunPlanActivity.class);
+			startActivity(intent);
 		}
 	};
 

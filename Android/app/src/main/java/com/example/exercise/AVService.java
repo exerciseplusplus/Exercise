@@ -17,6 +17,11 @@ public class AVService {
     user.setPassword(password);
     user.setEmail(email);
     user.signUpInBackground(signUpCallback);
+    AVObject avo=new AVObject("UserInfo");
+    avo.put("user", user);
+    avo.put("username", username);
+    avo.put("password", password);
+    avo.saveInBackground();
   }
 
   public static void logout() {

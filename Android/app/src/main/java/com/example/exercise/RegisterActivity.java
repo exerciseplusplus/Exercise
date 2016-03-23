@@ -24,6 +24,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class RegisterActivity extends Activity {
 
@@ -119,34 +120,42 @@ public class RegisterActivity extends Activity {
 	    user.setPassword(password);
 	    user.setEmail(userEmail);
 	    user.setMobilePhoneNumber(phone);
-	    user.signUpInBackground(new SignUpCallback()
-	    {
+	    user.signUpInBackground(new SignUpCallback() {
 
 			@Override
 			public void done(AVException e) {
 				// TODO Auto-generated method stub
-				if (e==null)
-				showSignup(R.string.dialog_message_title,R.string.success_register_success);
-				else
-				{
-					switch(e.getCode())
-					{
+				if (e == null)
+					Toast.makeText(RegisterActivity.this, R.string.success_register_success, Toast.LENGTH_SHORT).show();
+					//showSignup(R.string.dialog_message_title, R.string.success_register_success);
+				else {
+					switch (e.getCode()) {
 						case 202:
-							showSignup(R.string.dialog_message_title,R.string.error_register_user_name_repeat);
-			              break;
-			            case 203:
-			            	showSignup(R.string.dialog_message_title,R.string.error_register_email_repeat);
-			              break;
-			            default:
-			            	showSignup(R.string.dialog_message_title,R.string.error_network);
+							showSignup(R.string.dialog_message_title, R.string.error_register_user_name_repeat);
+							break;
+						case 203:
+							showSignup(R.string.dialog_message_title, R.string.error_register_email_repeat);
+							break;
+						default:
+							showSignup(R.string.dialog_message_title, R.string.error_network);
 
-			              break;
-					
+							break;
+
 					}
 				}
 			}
-	    	
-	    });
+
+		});
+//		AVObject avo=new AVObject("UserInfo");
+//		avo.put("user", user);
+//		avo.put("username", userName);
+//		avo.put("password", password);
+//		avo.saveInBackground( );
+
+
+		Intent intent =new Intent(RegisterActivity.this,LoginActivity.class);
+		startActivity(intent);
+
 	}
 	
 	

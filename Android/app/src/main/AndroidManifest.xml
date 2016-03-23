@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.exercise"
     android:versionCode="1"
     android:versionName="1.0">
@@ -20,13 +21,15 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:name=".App"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Holo">
+        android:theme="@android:style/Theme.Holo"
+        tools:replace="android:theme">
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="kx4Rc3vRkLH3ie3A87pWiYvP" />
@@ -43,6 +46,17 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name">
+
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ForgetPasswdActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,21 +64,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
-            android:label="@string/app_name"></activity>
-        <activity
-            android:name=".ForgetPasswdActivity"
-            android:label="@string/app_name"></activity>
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"></activity>
-        <activity
             android:name=".RunActivity"
-            android:label="@string/app_name"></activity>
-        <activity android:name=".UpdownActivity"></activity>
-        <activity android:name=".RunRecordActivity"></activity>
-        <activity android:name=".RecordDetailActivity"></activity>
-        <activity android:name=".UpdownRecordActivity"></activity>
+            android:label="@string/app_name" />
+        <activity android:name=".UpdownActivity" />
+        <activity android:name=".RunRecordActivity" />
+        <activity android:name=".RecordDetailActivity" />
+        <activity android:name=".UpdownRecordActivity" />
         <activity android:name=".ui.FollowListActivity" />
         <activity
             android:name=".ui.StatusSendActivity"
@@ -79,7 +84,8 @@
         <activity
             android:name=".ui.UserListActivity"
             android:label="@string/find_people" />
-        <activity android:name=".RecommendUserActivity"></activity>
+        <activity android:name=".RecommendUserActivity" />
+        <activity android:name=".RunPlanActivity"></activity>
     </application>
 
 </manifest>

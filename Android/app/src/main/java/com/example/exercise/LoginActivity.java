@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -89,8 +90,8 @@ public class LoginActivity extends Activity {
 							{
 								progressDialogShow();
 								Log.d("Login", "Login successfully");
-								showLogin(R.string.dialog_message_title, R.string.dialog_text_wait);
-
+								//showLogin(R.string.dialog_message_title, R.string.dialog_text_wait);
+								Toast.makeText(LoginActivity.this,  R.string.dialog_text_wait, Toast.LENGTH_SHORT).show();
 								Intent intent =new Intent(LoginActivity.this,MainActivity.class);
 								startActivity(intent);
 								finish();

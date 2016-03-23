@@ -39,6 +39,7 @@ public class BaseListView<T> extends XListView implements XListView.IXListViewLi
   public static class DataInterface<T> {
     public List<T> getDatas(int skip, int limit, List<T> currentDatas) throws Exception {
       return new ArrayList<T>();
+
     }
 
     public void onItemSelected(T item) {

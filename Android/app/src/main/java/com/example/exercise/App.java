@@ -33,9 +33,9 @@ public class App extends Application {
   public void onCreate() {
     super.onCreate();
 
-    AVOSCloud.initialize(this,
-            "bbOVrjU0kGBQxkAqVLrENRJH-gzGzoHsz",
-            "TrYcf9AP3jAsbKndb91oavzw");
+    AVOSCloud.initialize(this, "bbOVrjU0kGBQxkAqVLrENRJH-gzGzoHsz", "TrYcf9AP3jAsbKndb91oavzw");
+//    AVOSCloud.initialize(this, "kyvOb1Xzl2ojRXV9uL1K0mAo-gzGzoHsz","iGgcTFRE6bfEEHIjo8EfJ1Q0");
+
     AVOSCloud.setDebugLogEnabled(true);
     AVOSCloud.useAVCloudCN();
 

@@ -1,6 +1,10 @@
 package com.example.exercise;
 
 import android.app.Activity;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.util.Log;
@@ -19,14 +23,14 @@ import java.util.Date;
 
 public class UpdownActivity extends Activity {
 
-
+    private SensorManager sensorManager;
+    private int count=0;
+    private static  String TAG="TEST";
+    private Sensor sensor;
     Button startButton ;
-    Button countButton ;
     TextView numberTextView;
     Chronometer chronometer;
 
-    int number=0;
-    int duration=0;
     boolean isStart=false;
     boolean reStart=false;
 
@@ -35,18 +39,15 @@ public class UpdownActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_updown);
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        sensor=sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
 
         startButton=(Button)findViewById(R.id.button_updown_start);
-        countButton=(Button)findViewById(R.id.button_updown_count);
-
-        numberTextView=(TextView)findViewById(R.id.editText_updown_number);
+        numberTextView=(TextView)findViewById(R.id.count);
 
         chronometer=(Chronometer)findViewById(R.id.chronometer_updown_time);
         chronometer.setFormat("计时时间:(%s)");
-
         startButton.setOnClickListener(startListener);
-        countButton.setOnClickListener(countListener);
-
     }
     OnClickListener startListener =new OnClickListener()
     {
@@ -54,66 +55,98 @@ public class UpdownActivity extends Activity {
         public void onClick(View v) {
             if (isStart)
             {
-                Log.d("Updown", "end count");
-                Log.d("Updown", Integer.toString(number));
-                startButton.setText("重新开始");
-
                 isStart=false;
+                Log.d("Updown", "end count");
+                Log.d("Updown",count+"");
+                numberTextView.setText("恭喜你完成俯卧撑"+count+"个");
+                startButton.setText("重新开始锻炼");
                 reStart=true;
                 chronometer.stop();
                 String stopTime=chronometer.getText().toString();
                 Log.d("Updown", stopTime);
-                putData( new Date(System.currentTimeMillis()));
-
-            }else
-            {
-                if (reStart)
-                {
+                putData(new Date(System.currentTimeMillis()));
+            }else {
+                if (reStart) {
                     chronometer.setBase(SystemClock.elapsedRealtime());
-                    isStart=true;
+                    isStart = true;
                     startButton.setText("停止");
+                    count=0;
+                    numberTextView.setText(count+"");
                     chronometer.start();
-                }
-                else
-                {
+                } else {
                     Log.d("Updown", "start count");
-                    Log.d("Updown", Integer.toString(number));
-                    numberTextView.setText(R.string.updown_number);
-                    isStart=true;
+                    Log.d("Updown", Integer.toString(count));
+                    numberTextView.setText(count + "");
+                    isStart = true;
                     startButton.setText("停止");
                     chronometer.setBase(SystemClock.elapsedRealtime());
                     chronometer.start();
                 }
-                number=0;
-                time=new Date(System.currentTimeMillis());
-
+                count = 0;
+                time = new Date(System.currentTimeMillis());
             }
         }
     };
-
-    OnClickListener countListener =new OnClickListener()
-    {
-        @Override
-        public void onClick(View v) {
-
-            String count= Integer.toString(number)+"个俯卧撑";
-            numberTextView.setText(count);
-            Log.d("Updown", Integer.toString(number));
-            if (isStart)
-                number++;
-        }
-    };
-
     public void  putData(Date now)
     {
         AVObject av =new AVObject("UpdownRecord");
         double duration = (now.getTime() - time.getTime())/1000;
         av.put("duration", duration);
-        av.put("number", number);
+        av.put("number", count);
         av.put("timestamp", time);
         AVUser avUser=AVUser.getCurrentUser();
         av.put("user",avUser);
         av.saveInBackground();
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (sensorManager != null) {// 注册监听器
+            sensorManager.registerListener(mProximityListener , sensor, SensorManager.SENSOR_DELAY_NORMAL);
+            // 第一个参数是Listener，第二个参数是所得传感器类型，第三个参数值获取传感器信息的频率
+        }
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (sensorManager != null) {// 取消监听器
+            sensorManager.unregisterListener(mProximityListener );
+        }
+    }
+
+    private SensorEventListener mProximityListener  = new SensorEventListener() {
+        boolean isHigh=false,isLow=false,isHighAgain=false;
+        @Override
+        public void onAccuracyChanged(Sensor arg0, int arg1) {
+
+        }
+
+        @Override
+        public void onSensorChanged(SensorEvent arg0) {
+            float[] val=arg0.values;
+            if(val[0]>=sensor.getMaximumRange()){
+                isHigh=true;
+                Log.e(TAG, "高度到达");
+            }
+
+            if(isHigh&&val[0]<=3){
+                isLow=true;
+                Log.e(TAG, "低度到达");
+            }
+
+            if(isLow&&val[0]>=sensor.getMaximumRange()){
+                isHighAgain=true;
+                Log.e(TAG, "高度再次到达");
+            }
+
+            if(isHighAgain){
+                count++;
+                numberTextView.setText(count + "");
+                isHigh=isLow=isHighAgain=false;
+                Log.e(TAG, "俯卧撑加1");
+            }
+        }
+    };
 }

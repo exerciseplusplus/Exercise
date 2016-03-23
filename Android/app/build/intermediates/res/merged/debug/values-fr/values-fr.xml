@@ -21,5 +21,10 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Partager avec"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Partager avec %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Réduire"</string>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.squareup/android-times-square/1.6.5/res/values-fr/values-fr.xml -->
+    <eat-comment/>
+    <string name="invalid_date">La date doit être comprise entre %1$s et %2$s.</string>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-fr/values-fr.xml -->
+    <eat-comment/>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
 </resources>
