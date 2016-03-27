@@ -11,6 +11,7 @@ import android.provider.MediaStore;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.avos.avoscloud.AVFile;
+import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVUser;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
@@ -108,7 +109,20 @@ public class StatusUtils {
       avatarView.setImageResource(avatarId);
     }
   }
+    public synchronized static void displayAvatarForObject(AVObject object, ImageView avatarView) {
 
+        int avatarIds[] = new int[]{R.drawable.status_avatar0, R.drawable.status_avatar1,
+                R.drawable.status_avatar3, R.drawable.status_avatar4,
+                R.drawable.status_avatar5, R.drawable.status_avatar6};
+        String id = object.getObjectId();
+        if (userId2randomAvatar.get(id) == null) {
+            userId2randomAvatar.put(id, new Random().nextInt(avatarIds.length));
+        }
+        int randomN = userId2randomAvatar.get(id);
+        int avatarId = avatarIds[randomN];
+        avatarView.setImageResource(avatarId);
+
+    }
   public static DisplayImageOptions avatarImageOptions = new DisplayImageOptions.Builder()
       .showImageOnLoading(R.drawable.default_user_avatar)
       .showImageForEmptyUri(R.drawable.default_user_avatar)

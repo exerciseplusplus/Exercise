@@ -14,4 +14,10 @@
 
     <color name="tree_green">#5CB98D</color>
     <color name="dark_tree_green">#428666</color>
+	
+	<color name="window_bg">#fff0f3f6</color>
+	<color name="shape_line">#ffcccccc</color>
+	<color name="button_unselected">#ff54acea</color>
+    <color name="button_selected">#ff419de4</color>
+
 </resources>

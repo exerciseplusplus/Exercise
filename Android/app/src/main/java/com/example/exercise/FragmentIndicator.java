@@ -25,10 +25,12 @@ public class FragmentIndicator extends LinearLayout implements OnClickListener {
     private static final String TAG_ICON_0 = "icon_tag_0";
     private static final String TAG_ICON_1 = "icon_tag_1";
     private static final String TAG_ICON_2 = "icon_tag_2";
+    private static final String TAG_ICON_3 = "icon_tag_3";
 
     private static final String TAG_TEXT_0 = "text_tag_0";
     private static final String TAG_TEXT_1 = "text_tag_1";
     private static final String TAG_TEXT_2 = "text_tag_2";
+    private static final String TAG_TEXT_3 = "text_tag_3";
 
     private static final int COLOR_UNSELECT = Color.argb(100, 107, 108, 110);
     private static final int COLOR_SELECT =  Color.argb(100, 71, 159, 209);
@@ -75,7 +77,7 @@ public class FragmentIndicator extends LinearLayout implements OnClickListener {
     }
 
     private void init() {
-        mIndicators = new View[3];
+        mIndicators = new View[4];
         mIndicators[0] = createIndicator(R.drawable.weight_select,
                 R.string.tab_register, COLOR_SELECT, TAG_ICON_0, TAG_TEXT_0);
         //mIndicators[0].setBackgroundResource(R.drawable.);
@@ -94,6 +96,12 @@ public class FragmentIndicator extends LinearLayout implements OnClickListener {
         mIndicators[2].setTag(Integer.valueOf(2));
         mIndicators[2].setOnClickListener(this);
         addView(mIndicators[2]);
+        mIndicators[3] = createIndicator(R.drawable.me,
+                R.string.tab_me, COLOR_UNSELECT, TAG_ICON_3, TAG_TEXT_3);
+        mIndicators[3].setBackgroundColor(Color.alpha(0));
+        mIndicators[3].setTag(Integer.valueOf(3));
+        mIndicators[3].setOnClickListener(this);
+        addView(mIndicators[3]);
     }
 
     public static void setIndicator(int which) {
@@ -120,6 +128,12 @@ public class FragmentIndicator extends LinearLayout implements OnClickListener {
                 prevText = (TextView) mIndicators[mCurIndicator].findViewWithTag(TAG_TEXT_2);
                 prevText.setTextColor(COLOR_UNSELECT);
                 break;
+            case 3:
+                prevIcon =(ImageView) mIndicators[mCurIndicator].findViewWithTag(TAG_ICON_3);
+                prevIcon.setImageResource(R.drawable.me);
+                prevText = (TextView) mIndicators[mCurIndicator].findViewWithTag(TAG_TEXT_3);
+                prevText.setTextColor(COLOR_UNSELECT);
+                break;
         }
 
         // update current status.
@@ -143,6 +157,12 @@ public class FragmentIndicator extends LinearLayout implements OnClickListener {
                 currIcon =(ImageView) mIndicators[which].findViewWithTag(TAG_ICON_2);
                 currIcon.setImageResource(R.drawable.thumb_up_select);
                 currText = (TextView) mIndicators[which].findViewWithTag(TAG_TEXT_2);
+                currText.setTextColor(COLOR_SELECT);
+                break;
+            case 3:
+                currIcon =(ImageView) mIndicators[which].findViewWithTag(TAG_ICON_3);
+                currIcon.setImageResource(R.drawable.me_select);
+                currText = (TextView) mIndicators[which].findViewWithTag(TAG_TEXT_3);
                 currText.setTextColor(COLOR_SELECT);
                 break;
         }
@@ -185,6 +205,12 @@ public class FragmentIndicator extends LinearLayout implements OnClickListener {
                     if (mCurIndicator != 3) {
                         mOnIndicateListener.onIndicate(v, 3);
                         setIndicator(3);
+                    }
+                    break;
+                case 4:
+                    if (mCurIndicator != 4) {
+                        mOnIndicateListener.onIndicate(v, 4);
+                        setIndicator(4);
                     }
                     break;
                 default:

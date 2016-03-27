@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -31,9 +32,17 @@ public class RegisterFragment extends Fragment{
 
     private View mParent;  
     private FragmentActivity mActivity;
-	
-	Button runButton;
-	Button updownButton;
+
+    ImageView runImage;
+    ImageView runRecordImage;
+    ImageView updownImage;
+    ImageView updownRecordImage;
+
+    TextView runText;
+    TextView runRecordText;
+    TextView updownText;
+    TextView updownRecordText;
+
     /**
      * Create a new instance of DetailsFragment, initialized to show the text at
      * 'index'.
@@ -64,46 +73,68 @@ public class RegisterFragment extends Fragment{
         super.onActivityCreated(savedInstanceState);  
         
         mActivity = getActivity();  
-        mParent = getView(); 
-		runButton = (Button)mParent.findViewById(R.id.button_register_run);
-		updownButton = (Button)mParent.findViewById(R.id.button_register_updown);
-		runButton.setOnClickListener(runListener);
-		updownButton.setOnClickListener(updownListener);
-       
+        mParent = getView();
+
+        runImage=(ImageView)mParent.findViewById(R.id.image_register_run);
+        runRecordImage=(ImageView)mParent.findViewById(R.id.image_register_run_record);
+        updownImage=(ImageView)mParent.findViewById(R.id.image_register_updown);
+        updownRecordImage=(ImageView)mParent.findViewById(R.id.image_register_updown_record);
+
+        runText=(TextView)mParent.findViewById(R.id.textView_register_run);
+        runRecordText=(TextView)mParent.findViewById(R.id.textView_register_run_record);
+        updownText=(TextView)mParent.findViewById(R.id.textView_register_updown);
+        updownRecordText=(TextView)mParent.findViewById(R.id.textView_register_updown_record);
+        runText.setClickable(true);runRecordText.setClickable(true);
+        updownText.setClickable(true);updownRecordText.setClickable(true);
+
+        runImage.setOnClickListener(runListener);
+        runRecordImage.setOnClickListener(runRecordListener);
+        updownImage.setOnClickListener(updownListener);
+        updownRecordImage.setOnClickListener(updownRecordListener);
+
+        runText.setOnClickListener(runListener);
+        runRecordText.setOnClickListener(runRecordListener);
+        updownText.setOnClickListener(updownListener);
+        updownRecordText.setOnClickListener(updownRecordListener);
     }
     OnClickListener runListener = new OnClickListener()
     {
     	public void onClick(View arg0) {
     		Log.d("Register","Hello");
     		//startAlarm();
-			Intent intent =new Intent(mActivity,RunRecordActivity.class);
+			Intent intent =new Intent(mActivity,RunActivity.class);
 			startActivity(intent);
     	}
+    };
+
+    OnClickListener runRecordListener = new OnClickListener()
+    {
+        public void onClick(View arg0) {
+            Log.d("Register","Hello");
+            //startAlarm();
+            Intent intent =new Intent(mActivity,RunRecordActivity.class);
+            startActivity(intent);
+        }
     };
 
     OnClickListener updownListener = new OnClickListener()
     {
     	public void onClick(View arg0) {
     		Log.d("Register","World");
-            Intent intent =new Intent(mActivity,UpdownRecordActivity.class);
+            Intent intent =new Intent(mActivity,UpdownActivity.class);
             startActivity(intent);
-    	
+
     	}
     };
-    
-	private void startAlarm() {
-		Log.d("GEO", "start alarm");
-		
-		AlarmManager am = (AlarmManager)mActivity.getSystemService(Context.ALARM_SERVICE);
-		Intent collectIntent = new Intent(mActivity, RunActivity.class);
-		PendingIntent collectSender 
-			= PendingIntent.getService(mActivity, 0, collectIntent, 0);
-		am.cancel(collectSender);
-		am.setRepeating(AlarmManager.ELAPSED_REALTIME
-			, SystemClock.elapsedRealtime()
-			, 10 * 1000
-			, collectSender);
-	}
+
+    OnClickListener updownRecordListener = new OnClickListener()
+    {
+        public void onClick(View arg0) {
+            Log.d("Register","World");
+            Intent intent =new Intent(mActivity,UpdownRecordActivity.class);
+            startActivity(intent);
+        }
+    };
 
     @Override
     public void onHiddenChanged(boolean hidden) {

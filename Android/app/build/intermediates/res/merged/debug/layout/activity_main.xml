@@ -25,7 +25,12 @@
         android:layout_height="fill_parent"
         android:layout_weight="1"
         class="com.example.exercise.RecommendFragment" />
-
+    <fragment
+        android:id="@+id/fragment_me"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        class="com.example.exercise.MeFragment" />
 
     <com.example.exercise.FragmentIndicator
         android:id="@+id/indicator"

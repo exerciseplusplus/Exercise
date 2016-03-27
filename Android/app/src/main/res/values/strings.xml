@@ -15,6 +15,7 @@
     <string name="login_label_signin">登 录</string>
     <string name="login_status_logging_in">登录中...</string>
     <string name="login_username_hint">Email或手机号</string>
+    <string name="login_out">注销</string>
 
     <string name="register_input_user_password_again">再次输入密码</string>
     <string name="register_input_user_email">请输入电子邮箱</string>
@@ -46,6 +47,7 @@
     <string name="tab_register">签到</string>
     <string name="tab_network">朋友圈</string>
     <string name="tab_recommend">推荐</string>
+    <string name="tab_me">我</string>
 
     <string name="fragment_register_run">跑步签到</string>
     <string name="fragment_register_updown">俯卧撑签到</string>
@@ -71,7 +73,7 @@
 
 
     <string name="recommend_user">推荐好友</string>
-
+    <string name="record_delete_tips">要删除这条记录吗</string>
 
     <string name="status_chat">发起会话</string>
     <string name="status_send">发送</string>
@@ -100,6 +102,32 @@
     <string name="find_people">找人</string>
     <string name="status_list_title">广场</string>
     <string name="person_activity_title">个人主页</string>
+
+    <string name="fragment">Hello blank fragment</string>
+
+    <string name="info_student_id">学号</string>
+    <string name="info_student_real_name">真实姓名</string>
+    <string name="info_student_body">其他信息</string>
+    <string name="info_student_register_num">签到次数</string>
+
+    <string name="info_student_id_change">修改学号</string>
+    <string name="info_student_real_name_change">修改姓名</string>
+
+    <string name="info_student_email">Email</string>
+    <string name="info_student_phone_number">手机号</string>
+
+    <string name="info_student_sex">性别</string>
+    <string name="info_student_age">年龄</string>
+    <string name="info_student_height">身高</string>
+    <string name="info_student_weight">体重</string>
+
+    <string name="info_student_email_change">修改Email</string>
+    <string name="info_student_phone_number_change">修改手机号</string>
+
+    <string name="info_student_sex_change">修改性别</string>
+    <string name="info_student_age_change">修改年龄</string>
+    <string name="info_student_height_change">修改身高</string>
+    <string name="info_student_weight_change">修改体重</string>
 
 
 </resources>

@@ -43,8 +43,7 @@
 
         <activity
             android:name="com.example.exercise.LoginActivity"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name" />
         <activity
             android:name="com.example.exercise.RegisterActivity"
             android:label="@string/app_name" />
@@ -83,6 +82,7 @@
             android:label="@string/find_people" />
         <activity android:name="com.example.exercise.RecommendUserActivity" />
         <activity android:name="com.example.exercise.RunPlanActivity" />
+        <activity android:name="com.example.exercise.UserInfoActivity" />
     </application>
 
 </manifest>

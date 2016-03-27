@@ -200,4 +200,30 @@ public class StatusService {
     }
     return userList;
   }
+
+  public static List<AVObject> getUpdownRecord(int skip, int limit) throws AVException {
+
+    AVQuery<AVObject> query = new AVQuery<AVObject>("UpdownRecord");
+    AVUser currentUser = AVUser.getCurrentUser();
+    query.whereEqualTo("user", currentUser);
+    query.skip(skip);
+    query.limit(limit);
+    query.orderByDescending("updatedAt");
+    return query.find();
+  }
+
+  public static List<AVObject> getRunRecord(int skip, int limit) throws AVException {
+
+    AVQuery<AVObject> query = new AVQuery<AVObject>("RunRecord");
+    AVUser currentUser = AVUser.getCurrentUser();
+    query.whereEqualTo("user", currentUser);
+    query.skip(skip);
+    query.limit(limit);
+    query.orderByDescending("updatedAt");
+    return query.find();
+  }
+
+  public static void deleteRecord(AVObject object) throws AVException {
+    object.delete();
+  }
 }

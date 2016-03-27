@@ -42,6 +42,10 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="button_selected">#ff419de4</color>
+    <color name="button_unselected">#ff54acea</color>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.squareup/android-times-square/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <color name="calendar_active_month_bg">#fff5f7f9</color>
@@ -109,6 +113,7 @@
     <color name="secondary_text_disabled_material_light">#24000000</color>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/values/color.xml -->
     <eat-comment/>
+    <color name="shape_line">#ffcccccc</color>
     <color name="status_background">#FFA</color>
     <color name="status_color">#FFFF0000</color>
     <color name="status_like_pink">#ff6868</color>
@@ -123,6 +128,7 @@
     <eat-comment/>
     <color name="tree_green">#5CB98D</color>
     <color name="white">#ffffffff</color>
+    <color name="window_bg">#fff0f3f6</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
@@ -318,6 +324,7 @@
     <string name="forget_email_send">邮件发送成功，请注意查收</string>
     <string name="forget_password_find_password_button">发送邮件</string>
     <string name="forget_password_find_password_email">请输入邮件地址</string>
+    <string name="fragment">Hello blank fragment</string>
     <string name="fragment_network_friend">查找好友</string>
     <string name="fragment_network_share">分享广场</string>
     <string name="fragment_recommend_method">运动推荐</string>
@@ -325,6 +332,24 @@
     <string name="fragment_register_run">跑步签到</string>
     <string name="fragment_register_updown">俯卧撑签到</string>
     <string name="hardLoading">努力加载中...</string>
+    <string name="info_student_age">年龄</string>
+    <string name="info_student_age_change">修改年龄</string>
+    <string name="info_student_body">其他信息</string>
+    <string name="info_student_email">Email</string>
+    <string name="info_student_email_change">修改Email</string>
+    <string name="info_student_height">身高</string>
+    <string name="info_student_height_change">修改身高</string>
+    <string name="info_student_id">学号</string>
+    <string name="info_student_id_change">修改学号</string>
+    <string name="info_student_phone_number">手机号</string>
+    <string name="info_student_phone_number_change">修改手机号</string>
+    <string name="info_student_real_name">真实姓名</string>
+    <string name="info_student_real_name_change">修改姓名</string>
+    <string name="info_student_register_num">签到次数</string>
+    <string name="info_student_sex">性别</string>
+    <string name="info_student_sex_change">修改性别</string>
+    <string name="info_student_weight">体重</string>
+    <string name="info_student_weight_change">修改体重</string>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.squareup/android-times-square/1.6.5/res/values/values.xml -->
     <eat-comment/>
     <string name="invalid_date">Date must be between %1$s and %2$s.</string>
@@ -339,6 +364,7 @@
     <string name="login_label_password">密码</string>
     <string name="login_label_signin">登 录</string>
     <string name="login_label_username">帐号</string>
+    <string name="login_out">注销</string>
     <string name="login_status_logging_in">登录中...</string>
     <string name="login_username_hint">Email或手机号</string>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.squareup/android-times-square/1.6.5/res/values/values.xml -->
@@ -350,6 +376,7 @@
     <string name="ok">好的</string>
     <string name="person_activity_title">个人主页</string>
     <string name="recommend_user">推荐好友</string>
+    <string name="record_delete_tips">要删除这条记录吗</string>
     <string name="register_input_user_checkcode">请输入验证码</string>
     <string name="register_input_user_checkcode_button">发送手机验证码</string>
     <string name="register_input_user_email">请输入电子邮箱</string>
@@ -380,6 +407,7 @@
     <string name="status_none_follow_desc">无</string>
     <string name="status_send">发送</string>
     <string name="success_register_success">注册成功</string>
+    <string name="tab_me">我</string>
     <string name="tab_network">朋友圈</string>
     <string name="tab_recommend">推荐</string>
     <string name="tab_register">签到</string>
@@ -1716,6 +1744,37 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">5dp</item>
     </style>
+    <style name="leba_bg_base_layout">
+       	<item name="android:orientation">horizontal</item>
+       	<item name="android:layout_width">fill_parent</item>
+      	<item name="android:layout_height">wrap_content</item>
+      	<item name="android:gravity">center_vertical</item>
+       	<item name="android:paddingTop">16.0dip</item>
+       	<item name="android:paddingBottom">16.0dip</item>
+       	<item name="android:focusable">true</item>
+       	<item name="android:clickable">true</item>   
+   </style>
+    <style name="leba_bg_bottom_layout" parent="@style/leba_bg_base_layout">
+       	<item name="android:background">@drawable/leba_bg_bottom_selector</item> 
+   </style>
+    <style name="leba_bg_layout">
+       	<item name="android:orientation">vertical</item>
+       	<item name="android:background">@drawable/leba_shape_bg</item>
+       	<item name="android:layout_width">fill_parent</item>
+      	<item name="android:layout_height">wrap_content</item>
+       	<item name="android:layout_marginLeft">8.0dip</item>
+       	<item name="android:layout_marginTop">10.0dip</item>
+       	<item name="android:layout_marginRight">8.0dip</item>   
+   </style>
+    <style name="leba_bg_mid_layout" parent="@style/leba_bg_base_layout">
+       	<item name="android:background">@drawable/leba_bg_mid_selector</item> 
+   </style>
+    <style name="leba_bg_single_layout" parent="@style/leba_bg_base_layout">
+       	<item name="android:background">@drawable/leba_bg_single_selector</item>  
+    </style>
+    <style name="leba_bg_top_layout" parent="@style/leba_bg_base_layout">      
+       	<item name="android:background">@drawable/leba_bg_top_selector</item>
+   </style>
     <style name="normalText" parent="@android:style/TextAppearance">
         <item name="android:textColor">#444</item>
         <item name="android:textSize">14sp</item>
