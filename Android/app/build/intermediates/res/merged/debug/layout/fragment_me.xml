@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/window_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/card_background_white">
+
+        <ImageView
+            android:id="@+id/ImageView_info_avatar"
+            android:layout_width="@dimen/status_layout_avatar_size"
+            android:layout_height="@dimen/status_layout_avatar_size"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/default_user_avatar" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/TextView_info_name"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text="name" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:scaleType="matrix"
+            android:id="@+id/ImageView_info_hint"
+            android:src="@drawable/mm_submenu" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:scrollbarThumbVertical="@drawable/scrollbar_handle_vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <!--  个人信息 -->
+            <LinearLayout
+                style="@style/leba_bg_layout">
+                <!--  学号 	-->
+                <LinearLayout
+                    style="@style/leba_bg_top_layout">
+                    <TextView android:id="@+id/textView_student_id_label" android:textSize="16.0dip" android:textColor="#ff333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/info_student_id" android:layout_weight="1.0" />
+                    <TextView android:id="@+id/textView_student_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip"/>
+                </LinearLayout>
+
+                <View android:background="@drawable/leba_shape_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+
+                <!-- 姓名 -->
+                <LinearLayout
+                    style="@style/leba_bg_bottom_layout">
+                    <TextView android:id="@+id/textView_real_name_label" android:textSize="16.0dip" android:textColor="#ff333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/info_student_real_name" android:layout_weight="1.0" />
+                    <TextView android:id="@+id/textView_real_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <!--  签到信息，身体素质 -->
+            <LinearLayout
+                style="@style/leba_bg_layout">
+                <!-- 身体素质 	-->
+                <LinearLayout
+                    style="@style/leba_bg_top_layout">
+                    <TextView android:id="@+id/textView_body_label" android:textSize="16.0dip" android:textColor="#ff333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/info_student_body" android:layout_weight="1.0" />
+                    <TextView android:id="@+id/textView_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" />
+                </LinearLayout>
+
+                <View android:background="@drawable/leba_shape_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+
+                <!--  签到信息 	-->
+                <LinearLayout
+                    style="@style/leba_bg_mid_layout">
+                    <TextView android:id="@+id/textView_register_num_label" android:textSize="16.0dip" android:textColor="#ff333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/info_student_register_num" android:layout_weight="1.0" />
+                    <TextView android:id="@+id/textView_register_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/leba_bg_layout"
+                android:padding="10.0dip">
+                <TextView
+                    android:id="@+id/textView_logout" android:textSize="16.0dip" android:textColor="#ffaa0000" android:layout_width="fill_parent" android:layout_height="wrap_content"
+                    android:layout_marginLeft="12.0dip" android:text="@string/login_out" android:layout_weight="1.0" android:ellipsize="marquee" android:focusable="true"
+                    android:focusableInTouchMode="true" android:scrollHorizontally="true"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+<!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/layout/fragment_me.xml -->

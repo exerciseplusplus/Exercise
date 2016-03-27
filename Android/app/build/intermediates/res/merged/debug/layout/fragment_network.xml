@@ -2,26 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/window_bg"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/button_network_share"
-        android:layout_width="fill_parent"
-        android:layout_height="258dp"
-        android:background="@drawable/exercise"
-        android:text="@string/fragment_network_share"
-        android:textColor="@color/white"
-        android:gravity="bottom|center_horizontal"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <include layout="@layout/status_menu" />
 
-    <Button
-        android:id="@+id/button_network_friend"
-        android:layout_width="fill_parent"
-        android:layout_height="260dp"
-        android:background="@drawable/friends"
-        android:text="@string/fragment_network_friend"
-        android:textColor="@color/white"
-        android:gravity="bottom|center_horizontal"/>
+        <com.example.exercise.ui.base.BaseListView
+            android:id="@+id/status_List"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
 
 
 </LinearLayout><!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/layout/fragment_network.xml -->

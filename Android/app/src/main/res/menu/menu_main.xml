@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/logout"
-        android:title="注销"
+        android:id="@+id/find_user"
+        android:title="查找好友"
         app:showAsAction="never" />
 </menu>

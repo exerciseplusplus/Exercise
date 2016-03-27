@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/find_user"
+        android:title="查找好友"
+        app:showAsAction="never" />
+</menu>
+<!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/menu/menu_main.xml -->

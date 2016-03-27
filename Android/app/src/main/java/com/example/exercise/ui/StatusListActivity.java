@@ -55,7 +55,7 @@ public class StatusListActivity extends BaseActivity {
   @Override
   public boolean onMenuItemSelected(int featureId, MenuItem item) {
 
-     if (item.getItemId() == id.logout) {
+     if (item.getItemId() == id.find_user) {
       AVUser.logOut();
       finish();
     }
