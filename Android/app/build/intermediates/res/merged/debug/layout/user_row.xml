@@ -23,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="name"
+            android:textColor="#ff333333"
             android:id="@+id/nameView"
             android:textSize="15sp"
             android:layout_height="wrap_content" />

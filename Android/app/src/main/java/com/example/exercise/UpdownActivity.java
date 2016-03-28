@@ -102,7 +102,7 @@ public class UpdownActivity extends Activity {
     protected void onResume() {
         super.onResume();
         if (sensorManager != null) {// 注册监听器
-            sensorManager.registerListener(mProximityListener , sensor, SensorManager.SENSOR_DELAY_NORMAL);
+            sensorManager.registerListener(mProximityListener , sensor, SensorManager.SENSOR_DELAY_FASTEST);
             // 第一个参数是Listener，第二个参数是所得传感器类型，第三个参数值获取传感器信息的频率
         }
 
@@ -128,24 +128,25 @@ public class UpdownActivity extends Activity {
             float[] val=arg0.values;
             if(val[0]>=sensor.getMaximumRange()){
                 isHigh=true;
-                Log.e(TAG, "高度到达");
+
+                //Log.e(TAG, "高度到达");
             }
 
             if(isHigh&&val[0]<=3){
                 isLow=true;
+                count++;
                 Log.e(TAG, "低度到达");
+                Log.e(TAG, "俯卧撑加1");
             }
 
             if(isLow&&val[0]>=sensor.getMaximumRange()){
                 isHighAgain=true;
-                Log.e(TAG, "高度再次到达");
+                //Log.e(TAG, "高度再次到达");
             }
 
             if(isHighAgain){
-                count++;
                 numberTextView.setText(count + "");
                 isHigh=isLow=isHighAgain=false;
-                Log.e(TAG, "俯卧撑加1");
             }
         }
     };

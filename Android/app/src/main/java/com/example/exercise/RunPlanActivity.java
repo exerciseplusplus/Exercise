@@ -3,6 +3,7 @@ package com.example.exercise;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -25,6 +26,8 @@ import com.squareup.timessquare.CalendarPickerView;
 
 public class RunPlanActivity extends Activity {
 
+    int planId;
+    String planName;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -34,6 +37,16 @@ public class RunPlanActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_run_plan);
+        Intent intent=getIntent();
+        planId=intent.getIntExtra("planId",0);
+        switch (planId)
+        {
+            case 0:planName="锻炼肌肉";break;
+            case 1:planName="新手跑步锻炼";break;
+            case 2:planName="4K米跑步锻炼";break;
+            case 3:planName="8K米跑步锻炼";break;
+            default:break;
+        }
 
         getData();
         Calendar nextYear = Calendar.getInstance();
@@ -95,7 +108,7 @@ public class RunPlanActivity extends Activity {
     private void getData() {
         AVQuery<AVObject> query = new AVQuery<AVObject>("RunRecommend");
         final AVUser avUser = AVUser.getCurrentUser();
-        query.whereEqualTo("name", "新手跑步锻炼");
+        query.whereEqualTo("name", planName);
         query.findInBackground(new FindCallback<AVObject>() {
             @Override
             public void done(List<AVObject> list2, AVException e) {

@@ -8,12 +8,12 @@ import butterknife.ButterKnife.Injector;
 public class PersonActivity$$ViewInjector<T extends com.example.exercise.ui.PersonActivity> implements Injector<T> {
   @Override public void inject(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131427515, "field 'personProfileLayout'");
-    target.personProfileLayout = finder.castView(view, 2131427515, "field 'personProfileLayout'");
-    view = finder.findRequiredView(source, 2131427474, "field 'statusList'");
-    target.statusList = finder.castView(view, 2131427474, "field 'statusList'");
-    view = finder.findRequiredView(source, 2131427514, "field 'followActionBtn' and method 'followAction'");
-    target.followActionBtn = finder.castView(view, 2131427514, "field 'followActionBtn'");
+    view = finder.findRequiredView(source, 2131427517, "field 'personProfileLayout'");
+    target.personProfileLayout = finder.castView(view, 2131427517, "field 'personProfileLayout'");
+    view = finder.findRequiredView(source, 2131427476, "field 'statusList'");
+    target.statusList = finder.castView(view, 2131427476, "field 'statusList'");
+    view = finder.findRequiredView(source, 2131427516, "field 'followActionBtn' and method 'followAction'");
+    target.followActionBtn = finder.castView(view, 2131427516, "field 'followActionBtn'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -22,9 +22,9 @@ public class PersonActivity$$ViewInjector<T extends com.example.exercise.ui.Pers
           target.followAction();
         }
       });
-    view = finder.findRequiredView(source, 2131427513, "field 'followStatusView'");
-    target.followStatusView = finder.castView(view, 2131427513, "field 'followStatusView'");
-    view = finder.findRequiredView(source, 2131427512, "field 'followLayout'");
+    view = finder.findRequiredView(source, 2131427515, "field 'followStatusView'");
+    target.followStatusView = finder.castView(view, 2131427515, "field 'followStatusView'");
+    view = finder.findRequiredView(source, 2131427514, "field 'followLayout'");
     target.followLayout = view;
   }
 

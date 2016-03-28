@@ -2,12 +2,15 @@ package com.example.exercise;
 
 import android.app.Application;
 import android.content.Context;
+import android.util.Log;
 
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVOSCloud;
+import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.FindCallback;
+import com.avos.avoscloud.GetCallback;
 import com.baidu.mapapi.SDKInitializer;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -65,7 +68,6 @@ public class App extends Application {
   public static AVUser lookupUser(String userId) {
     return userCache.get(userId);
   }
-
 
 
   public static void getAllUser()  {

@@ -2,24 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_login"
+    android:background="@color/window_bg"
     android:orientation="vertical">
-
-    <Button
-        android:id="@+id/button_recommend_user"
-        android:layout_width="fill_parent"
-        android:layout_height="260dp"
-        android:background="@drawable/friends"
-        android:text="@string/fragment_recommend_user"
-        android:textColor="@color/white"
-        android:gravity="bottom|center_horizontal"/>
-
-    <Button
-        android:id="@+id/button_recommend_method"
-        android:layout_width="fill_parent"
-        android:layout_height="258dp"
-        android:background="@drawable/exercise"
-        android:text="@string/fragment_recommend_method"
-        android:textColor="@color/white"
-        android:gravity="bottom|center_horizontal"/>
+    <!-- cacheColorHint：系统默认拖动过程中列表背景是黑的,设置为透明 -->
+    <ExpandableListView
+        android:id="@+id/expendlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/background_color"
+        android:childDivider="@color/background_color"
+        >
+    </ExpandableListView>
 </LinearLayout>

@@ -178,7 +178,7 @@ public class StatusService {
     return q.find();
   }
 
-  public static List<AVUser> recommendUsers(int skip, int limit) throws AVException {
+  public synchronized static List<AVUser> recommendUsers(int skip, int limit) throws AVException {
 
     AVQuery<AVObject> query = new AVQuery<AVObject>("UserRecommend");
     AVUser currentUser = AVUser.getCurrentUser();

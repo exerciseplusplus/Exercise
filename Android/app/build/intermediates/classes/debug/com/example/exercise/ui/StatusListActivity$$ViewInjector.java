@@ -8,9 +8,9 @@ import butterknife.ButterKnife.Injector;
 public class StatusListActivity$$ViewInjector<T extends com.example.exercise.ui.StatusListActivity> implements Injector<T> {
   @Override public void inject(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131427474, "field 'statusList'");
-    target.statusList = finder.castView(view, 2131427474, "field 'statusList'");
-    view = finder.findRequiredView(source, 2131427509, "method 'goFollowers'");
+    view = finder.findRequiredView(source, 2131427476, "field 'statusList'");
+    target.statusList = finder.castView(view, 2131427476, "field 'statusList'");
+    view = finder.findRequiredView(source, 2131427511, "method 'goFollowers'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -19,7 +19,7 @@ public class StatusListActivity$$ViewInjector<T extends com.example.exercise.ui.
           target.goFollowers();
         }
       });
-    view = finder.findRequiredView(source, 2131427510, "method 'goFollowing'");
+    view = finder.findRequiredView(source, 2131427512, "method 'goFollowing'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -28,7 +28,7 @@ public class StatusListActivity$$ViewInjector<T extends com.example.exercise.ui.
           target.goFollowing();
         }
       });
-    view = finder.findRequiredView(source, 2131427508, "method 'goSend'");
+    view = finder.findRequiredView(source, 2131427510, "method 'goSend'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

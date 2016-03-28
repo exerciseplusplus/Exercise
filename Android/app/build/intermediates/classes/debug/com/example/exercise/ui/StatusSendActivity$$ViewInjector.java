@@ -8,12 +8,12 @@ import butterknife.ButterKnife.Injector;
 public class StatusSendActivity$$ViewInjector<T extends com.example.exercise.ui.StatusSendActivity> implements Injector<T> {
   @Override public void inject(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131427519, "field 'editText'");
-    target.editText = finder.castView(view, 2131427519, "field 'editText'");
+    view = finder.findRequiredView(source, 2131427521, "field 'editText'");
+    target.editText = finder.castView(view, 2131427521, "field 'editText'");
     view = finder.findRequiredView(source, 2131427367, "field 'imageView'");
     target.imageView = finder.castView(view, 2131427367, "field 'imageView'");
-    view = finder.findRequiredView(source, 2131427520, "field 'imageAction' and method 'imageAction'");
-    target.imageAction = finder.castView(view, 2131427520, "field 'imageAction'");
+    view = finder.findRequiredView(source, 2131427522, "field 'imageAction' and method 'imageAction'");
+    target.imageAction = finder.castView(view, 2131427522, "field 'imageAction'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -22,7 +22,7 @@ public class StatusSendActivity$$ViewInjector<T extends com.example.exercise.ui.
           target.imageAction();
         }
       });
-    view = finder.findRequiredView(source, 2131427508, "method 'send'");
+    view = finder.findRequiredView(source, 2131427510, "method 'send'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
