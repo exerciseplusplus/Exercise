@@ -37,10 +37,10 @@
     </LinearLayout>
 
     <com.baidu.mapapi.map.MapView
-            android:id="@+id/bmapView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true" />
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true" />
 
 
 </LinearLayout><!-- From: file:/E:/myproject/android/Exercise/Android/app/src/main/res/layout/activity_run.xml -->

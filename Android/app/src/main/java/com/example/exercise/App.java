@@ -1,7 +1,9 @@
 package com.example.exercise;
 
 import android.app.Application;
+import android.app.Service;
 import android.content.Context;
+import android.os.Vibrator;
 import android.util.Log;
 
 import com.avos.avoscloud.AVException;
@@ -12,6 +14,7 @@ import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.FindCallback;
 import com.avos.avoscloud.GetCallback;
 import com.baidu.mapapi.SDKInitializer;
+import com.example.exercise.service.LocationService;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.utils.StorageUtils;
@@ -32,6 +35,9 @@ public class App extends Application {
   public static final String FOLLOWER = "follower";
   public static final String FOLLOWEE = "followee";
 
+  public LocationService locationService;
+  public Vibrator mVibrator;
+
   @Override
   public void onCreate() {
     super.onCreate();
@@ -43,7 +49,11 @@ public class App extends Application {
     AVOSCloud.useAVCloudCN();
 
     initImageLoader(this);
-    SDKInitializer.initialize(this);
+
+
+    locationService = new LocationService(getApplicationContext());
+    mVibrator =(Vibrator)getApplicationContext().getSystemService(Service.VIBRATOR_SERVICE);
+    SDKInitializer.initialize(getApplicationContext());
 //    getAllUser();
   }
 
