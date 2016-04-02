@@ -25,15 +25,15 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
         setFragmentIndicator(0);
 
-//
-//        AVUser.logInInBackground("keven", "521521", new LogInCallback() {
-//            public void done(AVUser user, AVException e) {
-//                if (e == null) {
-//                    Log.d("Login", "Login successfully");
-//                } else {
-//                }
-//            }
-//        });
+        App.getAllUser();
+        AVUser.logInInBackground("hh", "521521", new LogInCallback() {
+            public void done(AVUser user, AVException e) {
+                if (e == null) {
+                    Log.d("Login", "Login successfully");
+                } else {
+                }
+            }
+        });
     }
 
     /**

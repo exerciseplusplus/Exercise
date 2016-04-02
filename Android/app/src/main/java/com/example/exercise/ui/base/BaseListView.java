@@ -128,7 +128,7 @@ public class BaseListView<T> extends XListView implements XListView.IXListViewLi
     if (dataInterface != null) {
       dataInterface.onItemLongPressed(item);
     }
-    return false;
+    return true;
   }
 
 

@@ -31,6 +31,7 @@ public class RunRecordActivity extends BaseAVObjectListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(R.string.run_record_title);
         refresh();
 
     }
@@ -38,7 +39,6 @@ public class RunRecordActivity extends BaseAVObjectListActivity {
     @Override
     protected List<AVObject> getObjectList(int skip, int limit) throws Exception {
 
-        setTitle(R.string.run_record_title);
         return StatusService.getRunRecord(skip,limit);
     }
 

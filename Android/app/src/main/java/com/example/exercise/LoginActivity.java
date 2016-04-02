@@ -55,7 +55,6 @@ public class LoginActivity extends Activity {
         */
 
 //		AVAnalytics.trackAppOpened(getIntent());
-
 		loginButton = (Button) findViewById(R.id.button_login);
 		registerButton = (Button) findViewById(R.id.button_register);
 		forgetButton = (Button) findViewById(R.id.button_forget_password);
@@ -95,7 +94,6 @@ public class LoginActivity extends Activity {
 								Intent intent =new Intent(LoginActivity.this,MainActivity.class);
 								startActivity(intent);
 								finish();
-								App.getAllUser();
 							}
 							else
 							{

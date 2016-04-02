@@ -39,8 +39,8 @@
                     android:layout_gravity="left|center_vertical"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:textStyle="bold"
-                    android:textSize="13sp"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp"
                     android:layout_height="wrap_content"
                     android:text="name" />
 
