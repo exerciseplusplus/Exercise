@@ -44,7 +44,7 @@ public class RegisterActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_register);
-
+		setTitle(R.string.login_button_register);
 //		AVAnalytics.trackAppOpened(getIntent());
 
 	

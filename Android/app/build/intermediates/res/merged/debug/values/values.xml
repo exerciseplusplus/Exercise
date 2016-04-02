@@ -320,6 +320,7 @@
     <string name="error_register_password_null">密码不可为空</string>
     <string name="error_register_user_name_null">用户名不可空</string>
     <string name="error_register_user_name_repeat">用户名已被注册，请重新填写</string>
+    <string name="find_password">找回密码</string>
     <string name="find_people">找人</string>
     <string name="forget_email_send">邮件发送成功，请注意查收</string>
     <string name="forget_password_find_password_button">发送邮件</string>
@@ -383,8 +384,11 @@
     <string name="register_input_user_password_again">再次输入密码</string>
     <string name="register_input_user_phone">请输入手机号码</string>
     <string name="run_button_start">开始跑步</string>
-    <string name="run_info">跑步数据</string>
+    <string name="run_distance">距离</string>
     <string name="run_record_title">跑步记录</string>
+    <string name="run_speed">速度</string>
+    <string name="run_time">时间</string>
+    <string name="save_success">保存成功</string>
     <string name="status_addImage">添加图片</string>
     <!-- From: file:/E:/myproject/android/Exercise/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>

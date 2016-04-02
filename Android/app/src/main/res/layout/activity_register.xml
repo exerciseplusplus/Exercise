@@ -70,7 +70,7 @@
         android:ems="10"
         android:hint="@string/register_input_user_phone">
     </EditText>
-    
+
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"

@@ -13,6 +13,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVUser;
@@ -39,6 +40,7 @@ public class UpdownActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_updown);
+        setTitle(R.string.updown_record_button_start);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         sensor=sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
 
@@ -46,7 +48,7 @@ public class UpdownActivity extends Activity {
         numberTextView=(TextView)findViewById(R.id.count);
 
         chronometer=(Chronometer)findViewById(R.id.chronometer_updown_time);
-        chronometer.setFormat("计时时间:(%s)");
+        chronometer.setFormat("时间: %s");
         startButton.setOnClickListener(startListener);
     }
     OnClickListener startListener =new OnClickListener()
@@ -65,6 +67,7 @@ public class UpdownActivity extends Activity {
                 String stopTime=chronometer.getText().toString();
                 Log.d("Updown", stopTime);
                 putData(new Date(System.currentTimeMillis()));
+                Toast.makeText(UpdownActivity.this, R.string.save_success, Toast.LENGTH_SHORT).show();
             }else {
                 if (reStart) {
                     chronometer.setBase(SystemClock.elapsedRealtime());

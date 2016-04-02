@@ -34,7 +34,7 @@ public class ForgetPasswdActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_forget_password);
-
+		setTitle(R.string.find_password);
 //		AVAnalytics.trackAppOpened(getIntent());
 
 	

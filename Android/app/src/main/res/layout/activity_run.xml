@@ -6,7 +6,7 @@
     android:background="@color/window_bg">
 
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="120dip"
@@ -14,28 +14,41 @@
 
         <Button
             android:id="@+id/button_run_start"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
+            style="@style/btn_green.status_menu"
             android:text="开始"/>
 
         <TextView
             android:id="@+id/textView_distance"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:textColor="#ff333333"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/run_info" />
+            android:textColor="#ff333333"
+            android:textSize="16sp"
+            android:text="@string/run_distance"
+            android:layout_below="@+id/button_run_start"
+            android:gravity="center"/>
 
+        <TextView
+            android:id="@+id/textView_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff333333"
+            android:textSize="16sp"
+            android:text="@string/run_speed"
+            android:layout_below="@+id/textView_distance" />
         <Chronometer
             android:id="@+id/chronometer_run_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:background="@drawable/btn_style_normal" />
+            android:layout_below="@+id/textView_distance"
+            android:layout_alignRight="@+id/button_run_start"
+            android:layout_alignEnd="@+id/button_run_start" />
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <com.baidu.mapapi.map.MapView
         android:id="@+id/bmapView"

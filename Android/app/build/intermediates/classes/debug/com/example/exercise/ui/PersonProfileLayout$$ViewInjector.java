@@ -8,13 +8,13 @@ import butterknife.ButterKnife.Injector;
 public class PersonProfileLayout$$ViewInjector<T extends com.example.exercise.ui.PersonProfileLayout> implements Injector<T> {
   @Override public void inject(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131427517, "field 'profileLayout'");
+    view = finder.findRequiredView(source, 2131427518, "field 'profileLayout'");
     target.profileLayout = view;
-    view = finder.findRequiredView(source, 2131427519, "field 'nameView'");
-    target.nameView = finder.castView(view, 2131427519, "field 'nameView'");
-    view = finder.findRequiredView(source, 2131427518, "field 'avatarView'");
-    target.avatarView = finder.castView(view, 2131427518, "field 'avatarView'");
-    view = finder.findRequiredView(source, 2131427520, "field 'editHint'");
+    view = finder.findRequiredView(source, 2131427520, "field 'nameView'");
+    target.nameView = finder.castView(view, 2131427520, "field 'nameView'");
+    view = finder.findRequiredView(source, 2131427519, "field 'avatarView'");
+    target.avatarView = finder.castView(view, 2131427519, "field 'avatarView'");
+    view = finder.findRequiredView(source, 2131427521, "field 'editHint'");
     target.editHint = view;
   }
 

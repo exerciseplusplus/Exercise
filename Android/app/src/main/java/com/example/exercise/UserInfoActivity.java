@@ -57,6 +57,7 @@ public class UserInfoActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_info);
+        setTitle(R.string.info_student_body);
         user= AVUser.getCurrentUser();
         ButterKnife.inject(this);
         ageLabelView.setClickable(true);ageView.setClickable(true);

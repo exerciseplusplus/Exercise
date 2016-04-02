@@ -35,6 +35,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /***
  * 定位滤波demo，实际定位场景中，可能会存在很多的位置抖动，此示例展示了一种对定位结果进行的平滑优化处理
@@ -48,7 +49,8 @@ public class RunActivity extends Activity {
    public static float[] EARTH_WEIGHT = {0.1f,0.2f,0.4f,0.6f,0.8f};
     private MapView mMapView = null;
     private BaiduMap mBaiduMap;
-    TextView TextViewLocInfo;
+    TextView TextViewDistance;
+    TextView TextViewSpeed;
     private LocationService locService;
     private LinkedList<LocationEntity> locationList = new LinkedList<LocationEntity>(); // 存放历史定位结果的链表，最大存放当前结果的前5次定位结果
 
@@ -68,15 +70,16 @@ public class RunActivity extends Activity {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_run);
-
+        setTitle(R.string.run_button_start);
         mMapView = (MapView) findViewById(R.id.bmapView);
         startButton = (Button) findViewById(R.id.button_run_start);
-        TextViewLocInfo = (TextView)findViewById(R.id.textView_distance);
+        TextViewDistance = (TextView)findViewById(R.id.textView_distance);
+        TextViewSpeed = (TextView)findViewById(R.id.textView_speed);
 
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         startTime  =  df.format(time);
         chronometer=(Chronometer)findViewById(R.id.chronometer_run_time);
-        chronometer.setFormat("计时时间:(%s)");
+        chronometer.setFormat("时间: %s");
 
         startButton.setOnClickListener(startListener);
         rundata = new Rundata(this,"myDB.db",null,1);
@@ -130,17 +133,18 @@ public class RunActivity extends Activity {
 
                     DecimalFormat df = new DecimalFormat("#.00");
                     StringBuffer sb = new StringBuffer(256);
-                    sb.append("Distance : ");
+                    sb.append("距离 : ");
                     sb.append(df.format(distanceSum));
+                    TextViewDistance.setText(sb.toString());
+                    StringBuffer sb2 = new StringBuffer(256);
+                    sb2.append("速度 : ");
                     if (location.getLocType() == BDLocation.TypeGpsLocation){
-                        sb.append("\nSpeed : ");
-                        sb.append(df.format(location.getSpeed()));
+                        sb2.append(df.format(location.getSpeed()));
                     } else if (location.getLocType() == BDLocation.TypeNetWorkLocation){
-                        sb.append("\nSpeed : ");
-                        sb.append(df.format(curSpeed));
+                        sb2.append(df.format(curSpeed));
                     }
+                    TextViewSpeed.setText(sb2.toString());
 
-                    TextViewLocInfo.setText(sb.toString());
                     LatLng ll = new LatLng(location.getLatitude(),
                             location.getLongitude());
                     MapStatus.Builder builder = new MapStatus.Builder();
@@ -164,6 +168,7 @@ public class RunActivity extends Activity {
                 reStart=true;
                 chronometer.stop();
                 computeData();
+                Toast.makeText(RunActivity.this, R.string.save_success, Toast.LENGTH_SHORT).show();
                 count=0;
             }else
             {

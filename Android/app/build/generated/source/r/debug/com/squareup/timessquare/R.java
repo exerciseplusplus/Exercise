@@ -48,7 +48,7 @@ public final class R {
 		public static final int calendar_bg_selector = 0x7f02004e;
 	}
 	public static final class id {
-		public static final int calendar_grid = 0x7f0b00a0;
+		public static final int calendar_grid = 0x7f0b00a1;
 		public static final int day_view_adapter_class = 0x7f0b0004;
 		public static final int title = 0x7f0b002b;
 	}

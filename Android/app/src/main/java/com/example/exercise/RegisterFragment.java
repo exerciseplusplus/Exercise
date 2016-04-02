@@ -70,8 +70,7 @@ public class RegisterFragment extends Fragment{
 	}
     
     public void onActivityCreated(Bundle savedInstanceState) {  
-        super.onActivityCreated(savedInstanceState);  
-        
+        super.onActivityCreated(savedInstanceState);
         mActivity = getActivity();  
         mParent = getView();
 
