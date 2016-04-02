@@ -1981,9 +1981,9 @@ containing a value of this type.
         public static final int textView_age_label=0x7f0b0080;
         public static final int textView_body=0x7f0b0090;
         public static final int textView_body_label=0x7f0b008f;
+        public static final int textView_distance=0x7f0b006d;
         public static final int textView_email=0x7f0b007b;
         public static final int textView_email_label=0x7f0b007a;
-        public static final int textView_geo=0x7f0b006d;
         public static final int textView_height=0x7f0b0083;
         public static final int textView_height_label=0x7f0b0082;
         public static final int textView_logout=0x7f0b0093;

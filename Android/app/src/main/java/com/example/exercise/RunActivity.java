@@ -1,6 +1,7 @@
 package com.example.exercise;
 
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedList;
@@ -9,7 +10,6 @@ import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVUser;
 import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MyLocationData;
-import com.example.exercise.R;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClientOption;
@@ -25,8 +25,6 @@ import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.utils.DistanceUtil;
 import android.app.Activity;
-import android.database.Cursor;
-import android.location.Location;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -56,12 +54,11 @@ public class RunActivity extends Activity {
 
     int count=0;
     double curSpeed = 0;
+    double distanceSum=0;
     AVUser avuser=AVUser.getCurrentUser();
     Rundata rundata ;
-    Cursor mCursor;
     String startTime;
     Date time=new Date(System.currentTimeMillis());
-    boolean isFirstLoc = true; // 是否首次定位
     boolean isStart = false; // 是否开始定位
     boolean reStart=false;  //是否重新定位
     Chronometer chronometer;
@@ -74,7 +71,7 @@ public class RunActivity extends Activity {
 
         mMapView = (MapView) findViewById(R.id.bmapView);
         startButton = (Button) findViewById(R.id.button_run_start);
-        TextViewLocInfo = (TextView)findViewById(R.id.textView_geo);
+        TextViewLocInfo = (TextView)findViewById(R.id.textView_distance);
 
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         startTime  =  df.format(time);
@@ -97,7 +94,7 @@ public class RunActivity extends Activity {
         mOption.setLocationNotify(true);//可选，默认false，设置是否当gps有效时按照1S1次频率输出GPS结果
         mOption.setIgnoreKillProcess(true);//可选，默认true，定位SDK内部是一个SERVICE，并放到了独立进程，设置是否在stop的时候杀死这个进程，默认不杀死
         mOption.setCoorType("bd09ll"); // 设置坐标类型
-        mOption.setScanSpan(5000);
+        mOption.setScanSpan(3000);
         locService.setLocationOption(mOption);
         locService.registerListener(listener);
         //locService.start();
@@ -121,40 +118,34 @@ public class RunActivity extends Activity {
                     locData.putParcelable("loc", location);
                     locMsg.setData(locData);
                     locHander.sendMessage(locMsg);
+                    rundata.insert(avuser.getUsername(), startTime, location.getTime(), count, location.getLongitude(), location.getLatitude());
                     MyLocationData locData2 = new MyLocationData.Builder()
                             .accuracy(location.getRadius())
                                     // 此处设置开发者获取到的方向信息，顺时针0-360
                             .direction(100).latitude(location.getLatitude())
                             .longitude(location.getLongitude()).build();
                     mBaiduMap.setMyLocationData(locData2);
+                    Log.d("GEO", Double.toString(location.getLatitude()));
                     Log.d("GEO", Double.toString(location.getLongitude()));
-                    Log.d("GEO", Double.toString(location.getOperators()));
 
+                    DecimalFormat df = new DecimalFormat("#.00");
                     StringBuffer sb = new StringBuffer(256);
-                    sb.append("Latitude : ");
-                    sb.append(location.getLatitude());
-                    sb.append("\nLontitude : ");
-                    sb.append(location.getLongitude());
+                    sb.append("Distance : ");
+                    sb.append(df.format(distanceSum));
                     if (location.getLocType() == BDLocation.TypeGpsLocation){
                         sb.append("\nSpeed : ");
-                        sb.append(location.getSpeed());
+                        sb.append(df.format(location.getSpeed()));
                     } else if (location.getLocType() == BDLocation.TypeNetWorkLocation){
                         sb.append("\nSpeed : ");
-                        sb.append(curSpeed);
+                        sb.append(df.format(curSpeed));
                     }
 
                     TextViewLocInfo.setText(sb.toString());
-                    if (isFirstLoc) {
-                        isFirstLoc = false;
-                        startTime=location.getTime();
-                        LatLng ll = new LatLng(location.getLatitude(),
-                                location.getLongitude());
-                        MapStatus.Builder builder = new MapStatus.Builder();
-                        builder.target(ll).zoom(18.0f);
-                        mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
-                    }
-
-                    rundata.insert(avuser.getUsername(), startTime,location.getTime(),count, location.getLongitude(), location.getLatitude());
+                    LatLng ll = new LatLng(location.getLatitude(),
+                            location.getLongitude());
+                    MapStatus.Builder builder = new MapStatus.Builder();
+                    builder.target(ll).zoom(18.0f);
+                    mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
 
                 }
             }
@@ -169,7 +160,6 @@ public class RunActivity extends Activity {
             {
                 startButton.setText("开始");
                 locService.stop();
-                //showData();
                 isStart=false;
                 reStart=true;
                 chronometer.stop();
@@ -179,7 +169,6 @@ public class RunActivity extends Activity {
             {
                 if (reStart)
                 {
-
                     isStart=true;
                     startButton.setText("停止");
                     chronometer.setBase(SystemClock.elapsedRealtime());
@@ -195,8 +184,6 @@ public class RunActivity extends Activity {
                     chronometer.start();
 
                     locService.start();
-                    //handler.post(task);
-                    // Toast.makeText(RunActivity.this, "add Successed!", Toast.LENGTH_SHORT).show();
                 }
                 time=new Date(System.currentTimeMillis());
                 DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -211,7 +198,7 @@ public class RunActivity extends Activity {
      * 来判断新定位结果的抖动幅度，如果超过经验值，则判定为过大抖动，进行平滑处理,若速度过快，
      * 则推测有可能是由于运动速度本身造成的，则不进行低速平滑处理 ╭(●｀∀´●)╯
      *
-     * @param BDLocation
+     *
      * @return Bundle
      */
     private Bundle Algorithm(BDLocation location) {
@@ -250,6 +237,17 @@ public class RunActivity extends Activity {
             newLocation.time = System.currentTimeMillis();
             locationList.add(newLocation);
 
+        }
+        int n=locationList.size();
+        if(n>=2)
+        {
+            LatLng lastPoint = new LatLng(locationList.get(n-2).location.getLatitude(),
+                    locationList.get(n-2).location.getLongitude());
+            LatLng curPoint = new LatLng(locationList.get(n-1).location.getLatitude(),
+                    locationList.get(n-1).location.getLongitude());
+            double distance= DistanceUtil.getDistance(lastPoint, curPoint);
+            distanceSum+=distance;
+            curSpeed=distance/3.0;
         }
         return locData;
     }
@@ -298,78 +296,29 @@ public class RunActivity extends Activity {
 
     public void computeData()
     {
-        int i=0;
+        double duration=0;
         Date d1=null;
-        double olatitude=0,olongitude=0,distance=0,duration=0;
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date now=new Date(System.currentTimeMillis());
         try{
             d1 = df.parse(startTime);
+            duration = (now.getTime() - d1.getTime())/1000;
         }
         catch (Exception e)
         {
         }
-        Cursor cursor=rundata.query(startTime);
-        if (cursor.moveToFirst()) {
-            do {
-
-                String user = cursor.getString(cursor
-                        .getColumnIndex("user"));
-                String time = cursor.getString(cursor
-                        .getColumnIndex("nowtime"));
-                int seq = cursor.getInt(cursor
-                        .getColumnIndex("seq"));
-                double longitude = cursor.getDouble(cursor
-                        .getColumnIndex("longitude"));
-                double latitude = cursor.getDouble(cursor
-                        .getColumnIndex("latitude"));
-                Log.d("myDB", startTime);
-                Log.d("myDB", time);
-                Log.d("myDB", Integer.toString(seq));
-                Log.d("myDB", Double.toString(longitude));
-                Log.d("myDB", Double.toString(latitude));
-
-                try{
-                    d1 = df.parse(startTime);
-                    Date d2 = df.parse(time);
-                    duration = (d2.getTime() - d1.getTime())/1000;
-                }
-                catch (Exception e)
-                {
-                }
-
-
-                if (i==0)
-                {
-                    olatitude=latitude;
-                    olongitude=longitude;
-                    i=1;
-                }
-                else
-                {
-                    float[] results=new float[1];
-                    Location.distanceBetween(latitude, longitude, olatitude, olongitude, results);
-                    distance+= results[0];
-                    olatitude=latitude;
-                    olongitude=longitude;
-                }
-
-            } while (cursor.moveToNext());
-        }
-
-        cursor.close();
-        Log.d("myDB", Double.toString(distance));
+        Log.d("myDB", Double.toString(distanceSum));
         Log.d("myDB", Double.toString(duration));
 
         AVObject av =new AVObject("RunRecord");
         av.put("duration", duration);
-        av.put("distance", distance);
+        av.put("distance", distanceSum);
         av.put("timestamp", d1);
 
         AVUser avUser=AVUser.getCurrentUser();
         Log.d("myDB", avUser.getObjectId());
         av.put("user",avUser);
         av.saveInBackground();
-
     }
 
 

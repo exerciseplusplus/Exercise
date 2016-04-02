@@ -117,7 +117,7 @@ public class UpdownActivity extends Activity {
     }
 
     private SensorEventListener mProximityListener  = new SensorEventListener() {
-        boolean isHigh=false,isLow=false,isHighAgain=false;
+        boolean isHigh=false,isLow=false;
         @Override
         public void onAccuracyChanged(Sensor arg0, int arg1) {
 
@@ -128,25 +128,20 @@ public class UpdownActivity extends Activity {
             float[] val=arg0.values;
             if(val[0]>=sensor.getMaximumRange()){
                 isHigh=true;
-
-                //Log.e(TAG, "高度到达");
+                Log.e(TAG, "高度到达");
             }
 
             if(isHigh&&val[0]<=3){
                 isLow=true;
-                count++;
                 Log.e(TAG, "低度到达");
+            }
+
+
+            if(isHigh&&isLow){
+                count++;
                 Log.e(TAG, "俯卧撑加1");
-            }
-
-            if(isLow&&val[0]>=sensor.getMaximumRange()){
-                isHighAgain=true;
-                //Log.e(TAG, "高度再次到达");
-            }
-
-            if(isHighAgain){
                 numberTextView.setText(count + "");
-                isHigh=isLow=isHighAgain=false;
+                isHigh=isLow=false;
             }
         }
     };

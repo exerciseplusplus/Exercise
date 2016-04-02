@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/window_bg">
 
 
     <LinearLayout
@@ -16,13 +17,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:background="@drawable/btn_style_normal"
             android:text="开始"/>
 
         <TextView
-            android:id="@+id/textView_geo"
+            android:id="@+id/textView_distance"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:textColor="#ff333333"
             android:layout_height="wrap_content"
             android:text="@string/run_info" />
 

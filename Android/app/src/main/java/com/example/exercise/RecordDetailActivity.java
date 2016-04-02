@@ -9,6 +9,8 @@ import android.util.Log;
 
 import com.avos.avoscloud.LogUtil;
 import com.baidu.mapapi.map.BaiduMap;
+import com.baidu.mapapi.map.MapStatus;
+import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
@@ -51,6 +53,10 @@ public class RecordDetailActivity extends Activity {
         getData(time);
         mMapView = (MapView) findViewById(R.id.bmapView2);
         mBaiduMap = mMapView.getMap();
+        LatLng ll = new LatLng(lati[0],longi[0]);
+        MapStatus.Builder builder = new MapStatus.Builder();
+        builder.target(ll).zoom(18.0f);
+        mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
         addLine(lati,longi);
     }
 
